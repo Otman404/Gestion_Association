@@ -36,6 +36,9 @@
             this.modifier = new System.Windows.Forms.Button();
             this.ajouter = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.facebook = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Afficher
@@ -145,12 +148,55 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // facebook
+            // 
+            this.facebook.BackColor = System.Drawing.Color.White;
+            this.facebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.facebook.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.facebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.facebook.Image = ((System.Drawing.Image)(resources.GetObject("facebook.Image")));
+            this.facebook.Location = new System.Drawing.Point(84, 708);
+            this.facebook.Name = "facebook";
+            this.facebook.Size = new System.Drawing.Size(44, 36);
+            this.facebook.TabIndex = 7;
+            this.facebook.UseVisualStyleBackColor = false;
+            this.facebook.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(147, 708);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(44, 36);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(210, 708);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(44, 36);
+            this.button4.TabIndex = 9;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // GestionAssoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1218, 756);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.facebook);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ajouter);
             this.Controls.Add(this.modifier);
@@ -176,6 +222,9 @@
         private System.Windows.Forms.Button modifier;
         private System.Windows.Forms.Button ajouter;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button facebook;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
     }
 }
 
