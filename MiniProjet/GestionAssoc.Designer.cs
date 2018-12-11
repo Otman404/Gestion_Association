@@ -75,7 +75,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FloralWhite;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.DarkCyan;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -83,8 +83,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(244, 64);
             this.button2.TabIndex = 2;
-            this.button2.Text = "      Afficher Tout Les Membres";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.Text = "  Afficher Tout Les Membres";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -99,7 +98,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(244, 64);
             this.button3.TabIndex = 3;
-            this.button3.Text = "      Supprimer Un Membre";
+            this.button3.Text = "    Supprimer Un Membre";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
             // 
