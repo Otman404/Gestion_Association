@@ -49,7 +49,8 @@
             this.Afficher.Name = "Afficher";
             this.Afficher.Size = new System.Drawing.Size(244, 64);
             this.Afficher.TabIndex = 0;
-            this.Afficher.Text = "Trouver Un Membre";
+            this.Afficher.Text = "       Trouver Un Membre";
+            this.Afficher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Afficher.UseVisualStyleBackColor = false;
             this.Afficher.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -64,13 +65,14 @@
             this.info.Name = "info";
             this.info.Size = new System.Drawing.Size(244, 64);
             this.info.TabIndex = 1;
-            this.info.Text = "Infos";
+            this.info.Text = "                  Infos";
+            this.info.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.info.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FloralWhite;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.DarkCyan;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -78,7 +80,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(244, 64);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Afficher Tous Les Membres";
+            this.button2.Text = "      Afficher Tout Les Membres";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
@@ -92,7 +96,8 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(244, 64);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Supprimer Un Membre";
+            this.button3.Text = "      Supprimer Un Membre";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
             // 
             // modifier
@@ -106,7 +111,8 @@
             this.modifier.Name = "modifier";
             this.modifier.Size = new System.Drawing.Size(244, 64);
             this.modifier.TabIndex = 4;
-            this.modifier.Text = "Modifier Un Membre";
+            this.modifier.Text = "      Modifier Un Membre";
+            this.modifier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.modifier.UseVisualStyleBackColor = false;
             // 
             // ajouter
@@ -120,7 +126,8 @@
             this.ajouter.Name = "ajouter";
             this.ajouter.Size = new System.Drawing.Size(244, 64);
             this.ajouter.TabIndex = 5;
-            this.ajouter.Text = "Ajouter Un Membre";
+            this.ajouter.Text = "      Ajouter Un Membre";
+            this.ajouter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ajouter.UseVisualStyleBackColor = false;
             this.ajouter.Click += new System.EventHandler(this.button5_Click_1);
             // 
