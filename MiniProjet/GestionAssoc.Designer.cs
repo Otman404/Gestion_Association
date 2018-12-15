@@ -39,11 +39,16 @@
             this.facebook = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.close = new System.Windows.Forms.Button();
+            this.maximize = new System.Windows.Forms.Button();
+            this.minimize = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Afficher
             // 
-            this.Afficher.BackColor = System.Drawing.Color.FloralWhite;
+            this.Afficher.BackColor = System.Drawing.Color.White;
             this.Afficher.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Afficher.ForeColor = System.Drawing.Color.DarkCyan;
             this.Afficher.Image = ((System.Drawing.Image)(resources.GetObject("Afficher.Image")));
@@ -59,7 +64,7 @@
             // 
             // info
             // 
-            this.info.BackColor = System.Drawing.Color.FloralWhite;
+            this.info.BackColor = System.Drawing.Color.White;
             this.info.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.info.ForeColor = System.Drawing.Color.DarkCyan;
             this.info.Image = ((System.Drawing.Image)(resources.GetObject("info.Image")));
@@ -74,7 +79,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FloralWhite;
+            this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.DarkCyan;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
@@ -89,7 +94,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FloralWhite;
+            this.button3.BackColor = System.Drawing.Color.White;
             this.button3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.DarkCyan;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
@@ -104,7 +109,7 @@
             // 
             // modifier
             // 
-            this.modifier.BackColor = System.Drawing.Color.FloralWhite;
+            this.modifier.BackColor = System.Drawing.Color.White;
             this.modifier.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modifier.ForeColor = System.Drawing.Color.DarkCyan;
             this.modifier.Image = ((System.Drawing.Image)(resources.GetObject("modifier.Image")));
@@ -119,7 +124,7 @@
             // 
             // ajouter
             // 
-            this.ajouter.BackColor = System.Drawing.Color.FloralWhite;
+            this.ajouter.BackColor = System.Drawing.Color.White;
             this.ajouter.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ajouter.ForeColor = System.Drawing.Color.DarkCyan;
             this.ajouter.Image = ((System.Drawing.Image)(resources.GetObject("ajouter.Image")));
@@ -187,12 +192,60 @@
             this.button4.TabIndex = 9;
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // close
+            // 
+            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close.ForeColor = System.Drawing.Color.Transparent;
+            this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
+            this.close.Location = new System.Drawing.Point(1144, 1);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(75, 64);
+            this.close.TabIndex = 10;
+            this.close.UseVisualStyleBackColor = true;
+            // 
+            // maximize
+            // 
+            this.maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.maximize.ForeColor = System.Drawing.Color.Transparent;
+            this.maximize.Image = ((System.Drawing.Image)(resources.GetObject("maximize.Image")));
+            this.maximize.Location = new System.Drawing.Point(1063, 1);
+            this.maximize.Name = "maximize";
+            this.maximize.Size = new System.Drawing.Size(75, 64);
+            this.maximize.TabIndex = 11;
+            this.maximize.UseVisualStyleBackColor = true;
+            // 
+            // minimize
+            // 
+            this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimize.ForeColor = System.Drawing.Color.Transparent;
+            this.minimize.Image = ((System.Drawing.Image)(resources.GetObject("minimize.Image")));
+            this.minimize.Location = new System.Drawing.Point(982, 1);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(75, 64);
+            this.minimize.TabIndex = 12;
+            this.minimize.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(407, 150);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(600, 507);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // GestionAssoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1218, 756);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.minimize);
+            this.Controls.Add(this.maximize);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.facebook);
@@ -203,10 +256,12 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.info);
             this.Controls.Add(this.Afficher);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GestionAssoc";
-            this.Text = "Gestion D\'Association";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.GestionAssoc_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,6 +279,10 @@
         private System.Windows.Forms.Button facebook;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button close;
+        private System.Windows.Forms.Button maximize;
+        private System.Windows.Forms.Button minimize;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
