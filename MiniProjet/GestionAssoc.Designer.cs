@@ -273,6 +273,7 @@
             this.Name = "GestionAssoc";
             this.Text = " ";
             this.Load += new System.EventHandler(this.GestionAssoc_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GestionAssoc_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -71,6 +71,7 @@
             this.minimize.Size = new System.Drawing.Size(75, 64);
             this.minimize.TabIndex = 15;
             this.minimize.UseVisualStyleBackColor = true;
+            this.minimize.UseWaitCursor = true;
             // 
             // maximize
             // 
@@ -118,6 +119,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(516, 565);
             this.panel2.TabIndex = 17;
+            this.panel2.UseWaitCursor = true;
             // 
             // textBox1
             // 
@@ -204,7 +206,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(178, 398);
+            this.button1.Location = new System.Drawing.Point(164, 395);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(190, 42);
             this.button1.TabIndex = 25;
@@ -224,6 +226,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UserControl1";
             this.Size = new System.Drawing.Size(1218, 756);
+            this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
