@@ -247,6 +247,7 @@
             // 
             // UserControl1
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
@@ -261,6 +262,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserControl1";
             this.Load += new System.EventHandler(this.UserControl1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UserControl1_KeyDown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserControl1_MouseDown);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
