@@ -17,7 +17,7 @@ namespace MiniProjet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GestionAssoc());
+            Application.Run(new UserControl1());
         }
     }
 }

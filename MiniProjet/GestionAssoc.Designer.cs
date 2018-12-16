@@ -203,6 +203,7 @@
             this.close.Size = new System.Drawing.Size(75, 64);
             this.close.TabIndex = 10;
             this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // maximize
             // 
@@ -214,6 +215,7 @@
             this.maximize.Size = new System.Drawing.Size(75, 64);
             this.maximize.TabIndex = 11;
             this.maximize.UseVisualStyleBackColor = true;
+            this.maximize.Click += new System.EventHandler(this.maximize_Click);
             // 
             // minimize
             // 
@@ -225,13 +227,14 @@
             this.minimize.Size = new System.Drawing.Size(75, 64);
             this.minimize.TabIndex = 12;
             this.minimize.UseVisualStyleBackColor = true;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(407, 150);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(600, 507);
+            this.pictureBox1.Size = new System.Drawing.Size(721, 539);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
