@@ -41,5 +41,10 @@ namespace MiniProjet
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

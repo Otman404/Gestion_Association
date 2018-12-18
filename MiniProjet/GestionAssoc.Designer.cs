@@ -198,7 +198,7 @@
             this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close.ForeColor = System.Drawing.Color.Transparent;
             this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
-            this.close.Location = new System.Drawing.Point(1144, 1);
+            this.close.Location = new System.Drawing.Point(1144, 9);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(75, 64);
             this.close.TabIndex = 10;
@@ -210,7 +210,7 @@
             this.maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maximize.ForeColor = System.Drawing.Color.Transparent;
             this.maximize.Image = ((System.Drawing.Image)(resources.GetObject("maximize.Image")));
-            this.maximize.Location = new System.Drawing.Point(1063, 1);
+            this.maximize.Location = new System.Drawing.Point(1063, 9);
             this.maximize.Name = "maximize";
             this.maximize.Size = new System.Drawing.Size(75, 64);
             this.maximize.TabIndex = 11;
@@ -222,7 +222,7 @@
             this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimize.ForeColor = System.Drawing.Color.Transparent;
             this.minimize.Image = ((System.Drawing.Image)(resources.GetObject("minimize.Image")));
-            this.minimize.Location = new System.Drawing.Point(982, 1);
+            this.minimize.Location = new System.Drawing.Point(982, 9);
             this.minimize.Name = "minimize";
             this.minimize.Size = new System.Drawing.Size(75, 64);
             this.minimize.TabIndex = 12;
