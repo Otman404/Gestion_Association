@@ -49,7 +49,7 @@ namespace MiniProjet
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Folder\MiniProjet\Gestion_Association\MiniProjet\MiniProjet.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("Select count(*) from [LOGIN] where username='"+username.Text+"' and password = '"+password.Text+"'",con);
+            SqlDataAdapter sda = new SqlDataAdapter("Select count(*) from [ADMIN] where username='"+username.Text+"' and password = '"+password.Text+"'",con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if(dt.Rows[0][0].ToString() == "1")

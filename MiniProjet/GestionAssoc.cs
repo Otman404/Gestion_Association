@@ -67,7 +67,9 @@ namespace MiniProjet
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            FindMember fm = new FindMember();
+            this.Hide();
+            fm.Show();
         }
 
         private void button5_Click_1(object sender, EventArgs e)

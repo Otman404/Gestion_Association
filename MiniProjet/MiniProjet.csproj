@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindMember.Designer.cs">
+      <DependentUpon>FindMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionAssoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FindMember.resx">
+      <DependentUpon>FindMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionAssoc.resx">
       <DependentUpon>GestionAssoc.cs</DependentUpon>
     </EmbeddedResource>
