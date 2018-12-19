@@ -101,6 +101,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.PaleGreen;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(398, 233);
             this.dataGridView1.Name = "dataGridView1";
@@ -211,13 +213,14 @@
             this.button2.ForeColor = System.Drawing.Color.DarkCyan;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(39, 437);
+            this.button2.Location = new System.Drawing.Point(761, 594);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(244, 64);
             this.button2.TabIndex = 21;
             this.button2.Text = "  Afficher Tout Les Membres";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // info
             // 
@@ -241,7 +244,7 @@
             this.Afficher.ForeColor = System.Drawing.Color.DarkCyan;
             this.Afficher.Image = ((System.Drawing.Image)(resources.GetObject("Afficher.Image")));
             this.Afficher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Afficher.Location = new System.Drawing.Point(591, 594);
+            this.Afficher.Location = new System.Drawing.Point(451, 594);
             this.Afficher.Name = "Afficher";
             this.Afficher.Size = new System.Drawing.Size(244, 64);
             this.Afficher.TabIndex = 28;

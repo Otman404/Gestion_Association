@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace MiniProjet
 {
-    public partial class UserControl1 : Form
+    public partial class admin : Form
     {
-        public UserControl1()
+        public admin()
         {
             InitializeComponent();
         }
@@ -92,6 +92,17 @@ namespace MiniProjet
         private void UserControl1_KeyDown(object sender, KeyEventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (password.UseSystemPasswordChar == true)
+            {
+                password.UseSystemPasswordChar = false;
+                password.PasswordChar = '\0';
+            }
+            else
+                password.UseSystemPasswordChar = true;
         }
     }
 }

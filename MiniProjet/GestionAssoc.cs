@@ -74,7 +74,9 @@ namespace MiniProjet
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-
+            addMember am = new addMember();
+            this.Hide();
+            am.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -117,6 +119,13 @@ namespace MiniProjet
                          ? FormWindowState.Normal
                          : FormWindowState.Maximized;
             this.CenterToScreen();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FindMember fm = new FindMember();
+            this.Hide();
+            fm.Show();
         }
     }
 }
