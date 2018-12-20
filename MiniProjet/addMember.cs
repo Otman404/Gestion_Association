@@ -79,32 +79,58 @@ namespace MiniProjet
             string statut = statutCBX.Text;
             string statut_civil = statutCivilCBX.Text;
             string position = positionCBX.Text;
-            string somme_arg = argentTB.Text;
+            decimal somme_arg = decimal.Parse(argentTB.Text);
             string methode_pay = methodeCBX.Text;
 
             
             SqlConnection sc = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Folder\MiniProjet\Gestion_Association\MiniProjet\MiniProjet.mdf;Integrated Security=True;Connect Timeout=30");
             SqlDataAdapter sda = new SqlDataAdapter("select * from MEMBRE",sc);
-            SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
             DataSet ds = new DataSet();
-            sda.Fill(ds);
-            DataRow MyRow = ds.Tables[0].NewRow();
-            MyRow["nom"] = nom;
-            MyRow["prenom"] = prenom;
-            MyRow["cin"] = cin;
-            MyRow["ville"] = ville;
-            MyRow["Code_Postal"] = code_postal;
-            MyRow["sexe"] = sexe;
-            MyRow["email"] = email;
-            MyRow["num_tele"] = tele;
-            MyRow["date_naissance"] = date_naiss;
-            MyRow["lieu_naissance"] = lieu_naiss;
-            MyRow["statut"] = statut;
-            MyRow["statut_civil"] = statut_civil;
-            MyRow["position"] = position;
-            ds.Tables[0].Rows.Add(MyRow);
-            sda.Update(ds);
-            MessageBox.Show(this, "Membre Ajouté!", "Operation réussi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            sda.Fill(ds,"membre");
+            sda = new SqlDataAdapter("select * from Payement", sc);
+            sda.Fill(ds, "payement");
+            SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
+            DataRow MemberRows = ds.Tables["membre"].NewRow();
+            MemberRows["nom"] = nom;
+            MemberRows["prenom"] = prenom;
+            MemberRows["cin"] = cin;
+            MemberRows["ville"] = ville;
+            MemberRows["Code_Postal"] = code_postal;
+            MemberRows["sexe"] = sexe;
+            MemberRows["email"] = email;
+            MemberRows["num_tele"] = tele;
+            MemberRows["date_naissance"] = date_naiss;
+            MemberRows["lieu_naissance"] = lieu_naiss;
+            MemberRows["statut"] = statut;
+            MemberRows["statut_civil"] = statut_civil;
+            MemberRows["position"] = position;
+            ds.Tables["membre"].Rows.Add(MemberRows);
+            cmd.GetInsertCommand();
+            sda.Update(ds, "membre");
+            sda = new SqlDataAdapter("select TOP 1 id from MEMBRE order by id DESC ", sc);
+            sda.Fill(ds,"member_id");
+            int member_id = int.Parse(ds.Tables["member_id"].Rows[0]["id"].ToString());
+
+            /*
+            int i = ds.Tables[0].Rows.Count;
+            // .????
+            int member_id = ds.Tables[0].Rows[i - 1]["id"];
+            //*/
+            DataRow PayementRows = ds.Tables["payement"].NewRow();
+            PayementRows["membre_id"] = member_id;
+            PayementRows["methode_payement"] = methode_pay;
+            PayementRows["somme_argent"] = somme_arg;
+            ds.Tables["payement"].Rows.Add(PayementRows);
+            sda.Update(ds, "payement");
+            //sda.Update(ds);
+            var mb = MessageBox.Show(this, "Membre Ajouté!", "Operation réussi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            if (mb == DialogResult.OK)
+            {
+                this.Hide();
+                GestionAssoc ga = new GestionAssoc();
+                ga.Show();
+            }
+
         }
 
 
