@@ -82,8 +82,6 @@ namespace MiniProjet
             {
 
                 decimal montant = decimal.Parse(textBox1.Text);
-
-
                 string methode = methodeCBX.Text;
                 query = "insert into Payement (membre_id,methode_payement,somme_argent) values(@membre_id,@methode_payement,@somme_argent)";
                 sda.InsertCommand = new SqlCommand(query, conn);
@@ -92,7 +90,7 @@ namespace MiniProjet
                 sda.InsertCommand.Parameters.Add("@somme_argent", SqlDbType.Decimal).Value = montant;
                 conn.Open();
                 sda.InsertCommand.ExecuteNonQuery();
-                MessageBox.Show(this, "Payement Effectué avec succes", "Operation Effectué", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(this, "Payement effectué avec succès", "Operation Effectué", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
             }
             else
