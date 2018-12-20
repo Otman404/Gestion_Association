@@ -55,6 +55,12 @@
     <Compile Include="addMember.Designer.cs">
       <DependentUpon>addMember.cs</DependentUpon>
     </Compile>
+    <Compile Include="Donation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donation.Designer.cs">
+      <DependentUpon>Donation.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </Compile>
     <EmbeddedResource Include="addMember.resx">
       <DependentUpon>addMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donation.resx">
+      <DependentUpon>Donation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindMember.resx">
       <DependentUpon>FindMember.cs</DependentUpon>

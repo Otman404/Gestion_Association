@@ -54,7 +54,7 @@ namespace MiniProjet
             sda.Fill(dt);
             if(dt.Rows[0][0].ToString() == "1")
             {
-                 this.Hide();
+                this.Hide();
                 Form us1 = new GestionAssoc();
                 us1.Show();
             }

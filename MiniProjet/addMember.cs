@@ -17,7 +17,7 @@ namespace MiniProjet
         {
             InitializeComponent();
         }
-
+        
         private void label11_Click(object sender, EventArgs e)
         {
 
@@ -66,6 +66,16 @@ namespace MiniProjet
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            TextBox tb = new TextBox();
+            if (tb != argentTB && string.IsNullOrEmpty(tb.Text))
+            {
+                MessageBox.Show(this, "Certains champs n'ont pas était remplit", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                button1.Enabled = false;
+                return;
+            }
+
+
             string nom = nomTB.Text;
             string prenom = prenomTB.Text;
             string cin = cinTB.Text;
@@ -121,7 +131,7 @@ namespace MiniProjet
             sda.InsertCommand.Parameters.Add("@membre_id", SqlDbType.Int).Value = membre_id;
             sda.InsertCommand.Parameters.Add("@methode_payement", SqlDbType.VarChar).Value = methode_pay;
             sda.InsertCommand.Parameters.Add("@somme_argent", SqlDbType.VarChar).Value = somme_arg;
-            sda.InsertCommand.ExecuteNonQuery();
+             
             var mb = MessageBox.Show(this, "Membre Ajouté!", "Operation réussi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             if (mb == DialogResult.OK)
             {
@@ -153,6 +163,13 @@ namespace MiniProjet
         private void methodeTB_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GestionAssoc ga = new GestionAssoc();
+            ga.Show();
         }
     }
 }

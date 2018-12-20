@@ -57,5 +57,24 @@ namespace MiniProjet
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GestionAssoc ga = new GestionAssoc();
+            ga.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ajouter_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            addMember am = new addMember();
+            am.Show();
+        }
     }
 }

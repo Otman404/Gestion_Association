@@ -45,7 +45,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.info = new System.Windows.Forms.Button();
             this.Afficher = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // minimize
@@ -98,6 +101,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(273, 38);
             this.textBox1.TabIndex = 17;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
             // 
@@ -175,6 +179,7 @@
             this.ajouter.Text = "      Ajouter Un Membre";
             this.ajouter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ajouter.UseVisualStyleBackColor = false;
+            this.ajouter.Click += new System.EventHandler(this.ajouter_Click);
             // 
             // modifier
             // 
@@ -253,12 +258,40 @@
             this.Afficher.UseVisualStyleBackColor = false;
             this.Afficher.Click += new System.EventHandler(this.Afficher_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(13, 26);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.DarkCyan;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(39, 436);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(244, 64);
+            this.button5.TabIndex = 30;
+            this.button5.Text = "      Effectuer Un Don";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // FindMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1200, 709);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Afficher);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
@@ -280,6 +313,7 @@
             this.Text = "FindMember";
             this.Load += new System.EventHandler(this.FindMember_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,5 +337,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button info;
         private System.Windows.Forms.Button Afficher;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button5;
     }
 }
