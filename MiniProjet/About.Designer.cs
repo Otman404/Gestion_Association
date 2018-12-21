@@ -75,6 +75,7 @@
             this.minimize.Size = new System.Drawing.Size(75, 64);
             this.minimize.TabIndex = 17;
             this.minimize.UseVisualStyleBackColor = true;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
             // maximize
             // 
@@ -86,6 +87,7 @@
             this.maximize.Size = new System.Drawing.Size(75, 64);
             this.maximize.TabIndex = 16;
             this.maximize.UseVisualStyleBackColor = true;
+            this.maximize.Click += new System.EventHandler(this.maximize_Click);
             // 
             // close
             // 
@@ -97,6 +99,7 @@
             this.close.Size = new System.Drawing.Size(75, 64);
             this.close.TabIndex = 15;
             this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // pictureBox2
             // 

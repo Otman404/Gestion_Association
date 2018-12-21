@@ -59,5 +59,23 @@ namespace MiniProjet
         {
 
         }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void maximize_Click(object sender, EventArgs e)
+        {
+            WindowState = WindowState == FormWindowState.Maximized
+                         ? FormWindowState.Normal
+                         : FormWindowState.Maximized;
+            this.CenterToScreen();
+        }
+
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
