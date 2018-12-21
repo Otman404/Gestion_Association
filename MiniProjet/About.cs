@@ -77,5 +77,10 @@ namespace MiniProjet
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

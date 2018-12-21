@@ -123,12 +123,19 @@ namespace MiniProjet
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            FindMember fm = new FindMember();
+            Donation fm = new Donation();
             this.Hide();
             fm.Show();
         }
 
         private void info_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            About a = new About();
+            a.Show();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
         {
 
         }

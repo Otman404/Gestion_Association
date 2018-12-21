@@ -47,8 +47,12 @@
             this.Afficher = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // minimize
@@ -61,6 +65,7 @@
             this.minimize.Size = new System.Drawing.Size(75, 64);
             this.minimize.TabIndex = 15;
             this.minimize.UseVisualStyleBackColor = true;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
             // maximize
             // 
@@ -72,6 +77,7 @@
             this.maximize.Size = new System.Drawing.Size(75, 64);
             this.maximize.TabIndex = 14;
             this.maximize.UseVisualStyleBackColor = true;
+            this.maximize.Click += new System.EventHandler(this.maximize_Click);
             // 
             // close
             // 
@@ -195,6 +201,7 @@
             this.modifier.Text = "      Modifier Un Membre";
             this.modifier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.modifier.UseVisualStyleBackColor = false;
+            this.modifier.Click += new System.EventHandler(this.modifier_Click);
             // 
             // button3
             // 
@@ -218,7 +225,7 @@
             this.button2.ForeColor = System.Drawing.Color.DarkCyan;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(761, 594);
+            this.button2.Location = new System.Drawing.Point(749, 594);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(244, 64);
             this.button2.TabIndex = 21;
@@ -241,6 +248,7 @@
             this.info.Text = "                  Infos";
             this.info.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.info.UseVisualStyleBackColor = false;
+            this.info.Click += new System.EventHandler(this.info_Click);
             // 
             // Afficher
             // 
@@ -249,7 +257,7 @@
             this.Afficher.ForeColor = System.Drawing.Color.DarkCyan;
             this.Afficher.Image = ((System.Drawing.Image)(resources.GetObject("Afficher.Image")));
             this.Afficher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Afficher.Location = new System.Drawing.Point(451, 594);
+            this.Afficher.Location = new System.Drawing.Point(439, 594);
             this.Afficher.Name = "Afficher";
             this.Afficher.Size = new System.Drawing.Size(244, 64);
             this.Afficher.TabIndex = 28;
@@ -283,6 +291,31 @@
             this.button5.Text = "      Effectuer Un Don";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1064, 327);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1064, 402);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 32;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // FindMember
             // 
@@ -290,6 +323,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1200, 709);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Afficher);
@@ -314,6 +349,8 @@
             this.Load += new System.EventHandler(this.FindMember_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,5 +376,7 @@
         private System.Windows.Forms.Button Afficher;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

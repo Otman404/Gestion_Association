@@ -71,7 +71,7 @@ namespace MiniProjet
             if (tb != argentTB && string.IsNullOrEmpty(tb.Text))
             {
                 MessageBox.Show(this, "Certains champs n'ont pas était remplit", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                button1.Enabled = false;
+                //button1.Enabled = false;
                 return;
             }
 
@@ -101,8 +101,17 @@ namespace MiniProjet
 
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Folder\MiniProjet\Gestion_Association\MiniProjet\MiniProjet.mdf;Integrated Security=True;Connect Timeout=30");
             SqlDataAdapter sda = new SqlDataAdapter();
+            SqlDataAdapter sda1 = new SqlDataAdapter("Select count(*) from [Membre] where cin='" + cin + "'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows[0][0].ToString() == "1")
+            {
+                MessageBox.Show(this, "Membre déja inscrit !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
 
-            
+          
 
             sda.InsertCommand = new SqlCommand(query,con);
             sda.InsertCommand.Parameters.Add("@nom",SqlDbType.VarChar).Value = nom;
@@ -139,7 +148,7 @@ namespace MiniProjet
                 GestionAssoc ga = new GestionAssoc();
                 ga.Show();
             }
-
+            }
         }
 
 
@@ -170,6 +179,29 @@ namespace MiniProjet
             this.Hide();
             GestionAssoc ga = new GestionAssoc();
             ga.Show();
+        }
+
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void maximize_Click(object sender, EventArgs e)
+        {
+            WindowState = WindowState == FormWindowState.Maximized
+                         ? FormWindowState.Normal
+                         : FormWindowState.Maximized;
+            this.CenterToScreen();
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = Color.FromArgb(22, 160, 133);
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = SystemColors.ButtonFace;
         }
     }
 }

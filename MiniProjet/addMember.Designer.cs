@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addMember));
             System.Windows.Forms.Label label16;
             System.Windows.Forms.Label label15;
             System.Windows.Forms.Label label14;
@@ -44,36 +43,37 @@
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label8;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addMember));
             this.minimize = new System.Windows.Forms.Button();
             this.maximize = new System.Windows.Forms.Button();
             this.close = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.statutCBX = new System.Windows.Forms.ComboBox();
-            this.statutCivilCBX = new System.Windows.Forms.ComboBox();
-            this.positionCBX = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.argentTB = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.methodeCBX = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.argentTB = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.positionCBX = new System.Windows.Forms.ComboBox();
+            this.statutCivilCBX = new System.Windows.Forms.ComboBox();
+            this.statutCBX = new System.Windows.Forms.ComboBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.villeTB = new System.Windows.Forms.MaskedTextBox();
-            this.cinTB = new System.Windows.Forms.MaskedTextBox();
-            this.prenomTB = new System.Windows.Forms.MaskedTextBox();
-            this.nomTB = new System.Windows.Forms.MaskedTextBox();
-            this.cpTB = new System.Windows.Forms.MaskedTextBox();
-            this.birthplaceTB = new System.Windows.Forms.MaskedTextBox();
-            this.emailTB = new System.Windows.Forms.MaskedTextBox();
-            this.birthdayCAL = new System.Windows.Forms.DateTimePicker();
-            this.phoneTB = new System.Windows.Forms.MaskedTextBox();
-            this.genderCBX = new System.Windows.Forms.ComboBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.genderCBX = new System.Windows.Forms.ComboBox();
+            this.phoneTB = new System.Windows.Forms.MaskedTextBox();
+            this.birthdayCAL = new System.Windows.Forms.DateTimePicker();
+            this.emailTB = new System.Windows.Forms.MaskedTextBox();
+            this.birthplaceTB = new System.Windows.Forms.MaskedTextBox();
+            this.cpTB = new System.Windows.Forms.MaskedTextBox();
+            this.nomTB = new System.Windows.Forms.MaskedTextBox();
+            this.prenomTB = new System.Windows.Forms.MaskedTextBox();
+            this.cinTB = new System.Windows.Forms.MaskedTextBox();
+            this.villeTB = new System.Windows.Forms.MaskedTextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             label16 = new System.Windows.Forms.Label();
             label15 = new System.Windows.Forms.Label();
             label14 = new System.Windows.Forms.Label();
@@ -90,93 +90,14 @@
             label4 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // minimize
-            // 
-            this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimize.ForeColor = System.Drawing.Color.Transparent;
-            this.minimize.Image = ((System.Drawing.Image)(resources.GetObject("minimize.Image")));
-            this.minimize.Location = new System.Drawing.Point(945, 11);
-            this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(75, 64);
-            this.minimize.TabIndex = 18;
-            this.minimize.UseVisualStyleBackColor = true;
-            // 
-            // maximize
-            // 
-            this.maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.maximize.ForeColor = System.Drawing.Color.Transparent;
-            this.maximize.Image = ((System.Drawing.Image)(resources.GetObject("maximize.Image")));
-            this.maximize.Location = new System.Drawing.Point(1026, 11);
-            this.maximize.Name = "maximize";
-            this.maximize.Size = new System.Drawing.Size(75, 64);
-            this.maximize.TabIndex = 17;
-            this.maximize.UseVisualStyleBackColor = true;
-            // 
-            // close
-            // 
-            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close.ForeColor = System.Drawing.Color.Transparent;
-            this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
-            this.close.Location = new System.Drawing.Point(1107, 11);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(75, 64);
-            this.close.TabIndex = 16;
-            this.close.UseVisualStyleBackColor = true;
-            this.close.Click += new System.EventHandler(this.close_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.GreenYellow;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1227, 10);
-            this.panel1.TabIndex = 19;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("MS Reference Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Yellow;
-            this.label11.Location = new System.Drawing.Point(442, 49);
-            this.label11.Name = "label11";
-            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label11.Size = new System.Drawing.Size(212, 42);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Inscription";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.pictureBox4);
-            this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Controls.Add(this.label17);
-            this.tabPage2.Controls.Add(this.argentTB);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.positionCBX);
-            this.tabPage2.Controls.Add(this.statutCivilCBX);
-            this.tabPage2.Controls.Add(this.statutCBX);
-            this.tabPage2.Controls.Add(label13);
-            this.tabPage2.Controls.Add(label14);
-            this.tabPage2.Controls.Add(label15);
-            this.tabPage2.Controls.Add(label16);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(798, 502);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Continuer";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // label16
             // 
@@ -218,93 +139,6 @@
             label13.TabIndex = 64;
             label13.Text = "Somme d\'argent initiale :";
             // 
-            // statutCBX
-            // 
-            this.statutCBX.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.statutCBX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.statutCBX.FormattingEnabled = true;
-            this.statutCBX.Items.AddRange(new object[] {
-            "Etudiant",
-            "Employé"});
-            this.statutCBX.Location = new System.Drawing.Point(192, 48);
-            this.statutCBX.Name = "statutCBX";
-            this.statutCBX.Size = new System.Drawing.Size(285, 24);
-            this.statutCBX.TabIndex = 69;
-            // 
-            // statutCivilCBX
-            // 
-            this.statutCivilCBX.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.statutCivilCBX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.statutCivilCBX.FormattingEnabled = true;
-            this.statutCivilCBX.Items.AddRange(new object[] {
-            "Célibataire",
-            "Marié"});
-            this.statutCivilCBX.Location = new System.Drawing.Point(192, 85);
-            this.statutCivilCBX.Name = "statutCivilCBX";
-            this.statutCivilCBX.Size = new System.Drawing.Size(285, 24);
-            this.statutCivilCBX.TabIndex = 70;
-            this.statutCivilCBX.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
-            // 
-            // positionCBX
-            // 
-            this.positionCBX.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.positionCBX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.positionCBX.FormattingEnabled = true;
-            this.positionCBX.Items.AddRange(new object[] {
-            "Membre",
-            "Président",
-            "Responsable Trésorie",
-            "Secrétaire",
-            "Manager",
-            "Administrateur",
-            "Vice-président"});
-            this.positionCBX.Location = new System.Drawing.Point(192, 125);
-            this.positionCBX.Name = "positionCBX";
-            this.positionCBX.Size = new System.Drawing.Size(285, 24);
-            this.positionCBX.TabIndex = 71;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Aquamarine;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(315, 347);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 52);
-            this.button1.TabIndex = 72;
-            this.button1.Text = "Confirmer";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // argentTB
-            // 
-            this.argentTB.Location = new System.Drawing.Point(191, 164);
-            this.argentTB.Name = "argentTB";
-            this.argentTB.Size = new System.Drawing.Size(286, 22);
-            this.argentTB.TabIndex = 73;
-            this.argentTB.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label17.Location = new System.Drawing.Point(53, 180);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(79, 17);
-            this.label17.TabIndex = 74;
-            this.label17.Text = "(Optionnel)";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.methodeCBX);
-            this.panel2.Controls.Add(label1);
-            this.panel2.Location = new System.Drawing.Point(3, 200);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(490, 105);
-            this.panel2.TabIndex = 93;
-            this.panel2.Visible = false;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -314,51 +148,6 @@
             label1.Size = new System.Drawing.Size(157, 17);
             label1.TabIndex = 88;
             label1.Text = "Methode de payement :";
-            // 
-            // methodeCBX
-            // 
-            this.methodeCBX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.methodeCBX.FormattingEnabled = true;
-            this.methodeCBX.Items.AddRange(new object[] {
-            "Espèce"});
-            this.methodeCBX.Location = new System.Drawing.Point(190, 44);
-            this.methodeCBX.Name = "methodeCBX";
-            this.methodeCBX.Size = new System.Drawing.Size(286, 24);
-            this.methodeCBX.TabIndex = 89;
-            this.methodeCBX.SelectedIndexChanged += new System.EventHandler(this.methodeTB_SelectedIndexChanged);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.pictureBox3);
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.genderCBX);
-            this.tabPage1.Controls.Add(this.phoneTB);
-            this.tabPage1.Controls.Add(this.birthdayCAL);
-            this.tabPage1.Controls.Add(this.emailTB);
-            this.tabPage1.Controls.Add(this.birthplaceTB);
-            this.tabPage1.Controls.Add(this.cpTB);
-            this.tabPage1.Controls.Add(this.nomTB);
-            this.tabPage1.Controls.Add(this.prenomTB);
-            this.tabPage1.Controls.Add(this.cinTB);
-            this.tabPage1.Controls.Add(this.villeTB);
-            this.tabPage1.Controls.Add(label8);
-            this.tabPage1.Controls.Add(label4);
-            this.tabPage1.Controls.Add(label3);
-            this.tabPage1.Controls.Add(label12);
-            this.tabPage1.Controls.Add(label2);
-            this.tabPage1.Controls.Add(label5);
-            this.tabPage1.Controls.Add(label6);
-            this.tabPage1.Controls.Add(label10);
-            this.tabPage1.Controls.Add(label9);
-            this.tabPage1.Controls.Add(label7);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(798, 502);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Ajouter Un Membre";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label7
             // 
@@ -460,77 +249,252 @@
             label8.TabIndex = 53;
             label8.Text = "Date de Naissance:";
             // 
-            // villeTB
+            // minimize
             // 
-            this.villeTB.BackColor = System.Drawing.Color.White;
-            this.villeTB.Location = new System.Drawing.Point(192, 159);
-            this.villeTB.Name = "villeTB";
-            this.villeTB.Size = new System.Drawing.Size(286, 22);
-            this.villeTB.TabIndex = 57;
+            this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimize.ForeColor = System.Drawing.Color.Transparent;
+            this.minimize.Image = ((System.Drawing.Image)(resources.GetObject("minimize.Image")));
+            this.minimize.Location = new System.Drawing.Point(988, 9);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(75, 64);
+            this.minimize.TabIndex = 18;
+            this.minimize.UseVisualStyleBackColor = true;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
-            // cinTB
+            // maximize
             // 
-            this.cinTB.BackColor = System.Drawing.Color.White;
-            this.cinTB.Location = new System.Drawing.Point(192, 122);
-            this.cinTB.Name = "cinTB";
-            this.cinTB.Size = new System.Drawing.Size(286, 22);
-            this.cinTB.TabIndex = 58;
+            this.maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.maximize.ForeColor = System.Drawing.Color.Transparent;
+            this.maximize.Image = ((System.Drawing.Image)(resources.GetObject("maximize.Image")));
+            this.maximize.Location = new System.Drawing.Point(1069, 9);
+            this.maximize.Name = "maximize";
+            this.maximize.Size = new System.Drawing.Size(75, 64);
+            this.maximize.TabIndex = 17;
+            this.maximize.UseVisualStyleBackColor = true;
+            this.maximize.Click += new System.EventHandler(this.maximize_Click);
             // 
-            // prenomTB
+            // close
             // 
-            this.prenomTB.BackColor = System.Drawing.Color.White;
-            this.prenomTB.Location = new System.Drawing.Point(192, 85);
-            this.prenomTB.Name = "prenomTB";
-            this.prenomTB.Size = new System.Drawing.Size(286, 22);
-            this.prenomTB.TabIndex = 59;
+            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close.ForeColor = System.Drawing.Color.Transparent;
+            this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
+            this.close.Location = new System.Drawing.Point(1150, 9);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(75, 64);
+            this.close.TabIndex = 16;
+            this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
-            // nomTB
+            // panel1
             // 
-            this.nomTB.BackColor = System.Drawing.Color.White;
-            this.nomTB.Location = new System.Drawing.Point(192, 48);
-            this.nomTB.Name = "nomTB";
-            this.nomTB.Size = new System.Drawing.Size(286, 22);
-            this.nomTB.TabIndex = 60;
+            this.panel1.BackColor = System.Drawing.Color.GreenYellow;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1227, 10);
+            this.panel1.TabIndex = 19;
             // 
-            // cpTB
+            // label11
             // 
-            this.cpTB.BackColor = System.Drawing.Color.White;
-            this.cpTB.Location = new System.Drawing.Point(192, 196);
-            this.cpTB.Name = "cpTB";
-            this.cpTB.Size = new System.Drawing.Size(286, 22);
-            this.cpTB.TabIndex = 61;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("MS Reference Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Yellow;
+            this.label11.Location = new System.Drawing.Point(442, 49);
+            this.label11.Name = "label11";
+            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label11.Size = new System.Drawing.Size(212, 42);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Inscription";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // birthplaceTB
+            // tabPage2
             // 
-            this.birthplaceTB.BackColor = System.Drawing.Color.White;
-            this.birthplaceTB.Location = new System.Drawing.Point(192, 387);
-            this.birthplaceTB.Name = "birthplaceTB";
-            this.birthplaceTB.Size = new System.Drawing.Size(286, 22);
-            this.birthplaceTB.TabIndex = 62;
+            this.tabPage2.Controls.Add(this.pictureBox4);
+            this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Controls.Add(this.label17);
+            this.tabPage2.Controls.Add(this.argentTB);
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.positionCBX);
+            this.tabPage2.Controls.Add(this.statutCivilCBX);
+            this.tabPage2.Controls.Add(this.statutCBX);
+            this.tabPage2.Controls.Add(label13);
+            this.tabPage2.Controls.Add(label14);
+            this.tabPage2.Controls.Add(label15);
+            this.tabPage2.Controls.Add(label16);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(798, 502);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Continuer";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // emailTB
+            // pictureBox4
             // 
-            this.emailTB.BackColor = System.Drawing.Color.White;
-            this.emailTB.Location = new System.Drawing.Point(192, 270);
-            this.emailTB.Name = "emailTB";
-            this.emailTB.Size = new System.Drawing.Size(286, 22);
-            this.emailTB.TabIndex = 64;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(549, 106);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(168, 225);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 94;
+            this.pictureBox4.TabStop = false;
             // 
-            // birthdayCAL
+            // panel2
             // 
-            this.birthdayCAL.Location = new System.Drawing.Point(192, 347);
-            this.birthdayCAL.Name = "birthdayCAL";
-            this.birthdayCAL.Size = new System.Drawing.Size(286, 22);
-            this.birthdayCAL.TabIndex = 68;
-            this.birthdayCAL.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            this.panel2.Controls.Add(this.methodeCBX);
+            this.panel2.Controls.Add(label1);
+            this.panel2.Location = new System.Drawing.Point(3, 200);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(490, 105);
+            this.panel2.TabIndex = 93;
+            this.panel2.Visible = false;
             // 
-            // phoneTB
+            // methodeCBX
             // 
-            this.phoneTB.BackColor = System.Drawing.Color.White;
-            this.phoneTB.Location = new System.Drawing.Point(192, 309);
-            this.phoneTB.Name = "phoneTB";
-            this.phoneTB.Size = new System.Drawing.Size(286, 22);
-            this.phoneTB.TabIndex = 69;
+            this.methodeCBX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.methodeCBX.FormattingEnabled = true;
+            this.methodeCBX.Items.AddRange(new object[] {
+            "Espèce"});
+            this.methodeCBX.Location = new System.Drawing.Point(190, 44);
+            this.methodeCBX.Name = "methodeCBX";
+            this.methodeCBX.Size = new System.Drawing.Size(286, 24);
+            this.methodeCBX.TabIndex = 89;
+            this.methodeCBX.SelectedIndexChanged += new System.EventHandler(this.methodeTB_SelectedIndexChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label17.Location = new System.Drawing.Point(53, 180);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(79, 17);
+            this.label17.TabIndex = 74;
+            this.label17.Text = "(Optionnel)";
+            // 
+            // argentTB
+            // 
+            this.argentTB.Location = new System.Drawing.Point(191, 164);
+            this.argentTB.Name = "argentTB";
+            this.argentTB.Size = new System.Drawing.Size(286, 22);
+            this.argentTB.TabIndex = 73;
+            this.argentTB.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Aquamarine;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(323, 359);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 52);
+            this.button1.TabIndex = 72;
+            this.button1.Text = "Confirmer";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // positionCBX
+            // 
+            this.positionCBX.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.positionCBX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.positionCBX.FormattingEnabled = true;
+            this.positionCBX.Items.AddRange(new object[] {
+            "Membre",
+            "Président",
+            "Responsable Trésorie",
+            "Secrétaire",
+            "Manager",
+            "Administrateur",
+            "Vice-président"});
+            this.positionCBX.Location = new System.Drawing.Point(192, 125);
+            this.positionCBX.Name = "positionCBX";
+            this.positionCBX.Size = new System.Drawing.Size(285, 24);
+            this.positionCBX.TabIndex = 71;
+            // 
+            // statutCivilCBX
+            // 
+            this.statutCivilCBX.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.statutCivilCBX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.statutCivilCBX.FormattingEnabled = true;
+            this.statutCivilCBX.Items.AddRange(new object[] {
+            "Célibataire",
+            "Marié"});
+            this.statutCivilCBX.Location = new System.Drawing.Point(192, 85);
+            this.statutCivilCBX.Name = "statutCivilCBX";
+            this.statutCivilCBX.Size = new System.Drawing.Size(285, 24);
+            this.statutCivilCBX.TabIndex = 70;
+            this.statutCivilCBX.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
+            // statutCBX
+            // 
+            this.statutCBX.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.statutCBX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.statutCBX.FormattingEnabled = true;
+            this.statutCBX.Items.AddRange(new object[] {
+            "Etudiant",
+            "Employé"});
+            this.statutCBX.Location = new System.Drawing.Point(192, 48);
+            this.statutCBX.Name = "statutCBX";
+            this.statutCBX.Size = new System.Drawing.Size(285, 24);
+            this.statutCBX.TabIndex = 69;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.pictureBox3);
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.genderCBX);
+            this.tabPage1.Controls.Add(this.phoneTB);
+            this.tabPage1.Controls.Add(this.birthdayCAL);
+            this.tabPage1.Controls.Add(this.emailTB);
+            this.tabPage1.Controls.Add(this.birthplaceTB);
+            this.tabPage1.Controls.Add(this.cpTB);
+            this.tabPage1.Controls.Add(this.nomTB);
+            this.tabPage1.Controls.Add(this.prenomTB);
+            this.tabPage1.Controls.Add(this.cinTB);
+            this.tabPage1.Controls.Add(this.villeTB);
+            this.tabPage1.Controls.Add(label8);
+            this.tabPage1.Controls.Add(label4);
+            this.tabPage1.Controls.Add(label3);
+            this.tabPage1.Controls.Add(label12);
+            this.tabPage1.Controls.Add(label2);
+            this.tabPage1.Controls.Add(label5);
+            this.tabPage1.Controls.Add(label6);
+            this.tabPage1.Controls.Add(label10);
+            this.tabPage1.Controls.Add(label9);
+            this.tabPage1.Controls.Add(label7);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(798, 502);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Ajouter Un Membre";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(549, 106);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(168, 225);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 72;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.MintCream;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(666, 432);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
             // genderCBX
             // 
@@ -544,18 +508,77 @@
             this.genderCBX.Size = new System.Drawing.Size(286, 24);
             this.genderCBX.TabIndex = 70;
             // 
-            // pictureBox1
+            // phoneTB
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.MintCream;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(693, 432);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 71;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.phoneTB.BackColor = System.Drawing.Color.White;
+            this.phoneTB.Location = new System.Drawing.Point(192, 309);
+            this.phoneTB.Name = "phoneTB";
+            this.phoneTB.Size = new System.Drawing.Size(286, 22);
+            this.phoneTB.TabIndex = 69;
+            // 
+            // birthdayCAL
+            // 
+            this.birthdayCAL.Location = new System.Drawing.Point(192, 347);
+            this.birthdayCAL.Name = "birthdayCAL";
+            this.birthdayCAL.Size = new System.Drawing.Size(286, 22);
+            this.birthdayCAL.TabIndex = 68;
+            this.birthdayCAL.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // emailTB
+            // 
+            this.emailTB.BackColor = System.Drawing.Color.White;
+            this.emailTB.Location = new System.Drawing.Point(192, 270);
+            this.emailTB.Name = "emailTB";
+            this.emailTB.Size = new System.Drawing.Size(286, 22);
+            this.emailTB.TabIndex = 64;
+            // 
+            // birthplaceTB
+            // 
+            this.birthplaceTB.BackColor = System.Drawing.Color.White;
+            this.birthplaceTB.Location = new System.Drawing.Point(192, 387);
+            this.birthplaceTB.Name = "birthplaceTB";
+            this.birthplaceTB.Size = new System.Drawing.Size(286, 22);
+            this.birthplaceTB.TabIndex = 62;
+            // 
+            // cpTB
+            // 
+            this.cpTB.BackColor = System.Drawing.Color.White;
+            this.cpTB.Location = new System.Drawing.Point(192, 196);
+            this.cpTB.Name = "cpTB";
+            this.cpTB.Size = new System.Drawing.Size(286, 22);
+            this.cpTB.TabIndex = 61;
+            // 
+            // nomTB
+            // 
+            this.nomTB.BackColor = System.Drawing.Color.White;
+            this.nomTB.Location = new System.Drawing.Point(192, 48);
+            this.nomTB.Name = "nomTB";
+            this.nomTB.Size = new System.Drawing.Size(286, 22);
+            this.nomTB.TabIndex = 60;
+            // 
+            // prenomTB
+            // 
+            this.prenomTB.BackColor = System.Drawing.Color.White;
+            this.prenomTB.Location = new System.Drawing.Point(192, 85);
+            this.prenomTB.Name = "prenomTB";
+            this.prenomTB.Size = new System.Drawing.Size(286, 22);
+            this.prenomTB.TabIndex = 59;
+            // 
+            // cinTB
+            // 
+            this.cinTB.BackColor = System.Drawing.Color.White;
+            this.cinTB.Location = new System.Drawing.Point(192, 122);
+            this.cinTB.Name = "cinTB";
+            this.cinTB.Size = new System.Drawing.Size(286, 22);
+            this.cinTB.TabIndex = 58;
+            // 
+            // villeTB
+            // 
+            this.villeTB.BackColor = System.Drawing.Color.White;
+            this.villeTB.Location = new System.Drawing.Point(192, 159);
+            this.villeTB.Name = "villeTB";
+            this.villeTB.Size = new System.Drawing.Size(286, 22);
+            this.villeTB.TabIndex = 57;
             // 
             // tabControl1
             // 
@@ -570,33 +593,13 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 25);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 23);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(549, 106);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(168, 225);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 72;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(549, 106);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(168, 225);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 94;
-            this.pictureBox4.TabStop = false;
             // 
             // addMember
             // 
@@ -616,15 +619,15 @@
             this.Text = "addMember";
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

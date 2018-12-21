@@ -18,7 +18,7 @@ namespace MiniProjet
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new admin());
-            Application.Run(new About());
+            Application.Run(new FindMember());
         }
     }
 }

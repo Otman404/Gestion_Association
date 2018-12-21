@@ -13,6 +13,8 @@ namespace MiniProjet
 {
     public partial class FindMember : Form
     {
+        BindingSource members = new BindingSource();
+
         public FindMember()
         {
             InitializeComponent();
@@ -56,6 +58,9 @@ namespace MiniProjet
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            members.DataSource = ds.Tables[0];
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -75,6 +80,55 @@ namespace MiniProjet
             this.Hide();
             addMember am = new addMember();
             am.Show();
+        }
+
+        private void modifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Donation fm = new Donation();
+            this.Hide();
+            fm.Show();
+        }
+
+        private void info_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            About a = new About();
+            a.Show();
+        }
+
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void maximize_Click(object sender, EventArgs e)
+        {
+            WindowState = WindowState == FormWindowState.Maximized
+                        ? FormWindowState.Normal
+                        : FormWindowState.Maximized;
+            this.CenterToScreen();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            members.MoveNext();
+            UpdatDGV();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            members.MovePrevious();
+            UpdatDGV();
+        }
+        private void UpdatDGV()
+        {
+            dataGridView1.ClearSelection();
+            dataGridView1.Rows[members.Position].Selected = true;
         }
     }
 }

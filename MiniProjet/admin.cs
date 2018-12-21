@@ -38,12 +38,15 @@ namespace MiniProjet
 
         private void maximize_Click(object sender, EventArgs e)
         {
-
+            WindowState = WindowState == FormWindowState.Maximized
+                         ? FormWindowState.Normal
+                         : FormWindowState.Maximized;
+            this.CenterToScreen();
         }
 
         private void minimize_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -103,6 +106,16 @@ namespace MiniProjet
             }
             else
                 password.UseSystemPasswordChar = true;
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+           // button1.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            //button1.BackColor = Color.Gold;
         }
     }
 }
