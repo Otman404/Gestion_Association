@@ -98,5 +98,10 @@ namespace MiniProjet
                 MessageBox.Show(this, "Champs Vide", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -127,5 +127,10 @@ namespace MiniProjet
             this.Hide();
             fm.Show();
         }
+
+        private void info_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -77,6 +77,7 @@
             this.info.Text = "                  Infos";
             this.info.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.info.UseVisualStyleBackColor = false;
+            this.info.Click += new System.EventHandler(this.info_Click);
             // 
             // button2
             // 
