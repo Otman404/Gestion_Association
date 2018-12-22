@@ -51,6 +51,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -228,9 +229,9 @@
             this.button2.ForeColor = System.Drawing.Color.DarkCyan;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(794, 594);
+            this.button2.Location = new System.Drawing.Point(602, 594);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(244, 64);
+            this.button2.Size = new System.Drawing.Size(208, 37);
             this.button2.TabIndex = 21;
             this.button2.Text = "  Afficher Tout Les Membres";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -244,7 +245,7 @@
             this.info.ForeColor = System.Drawing.Color.DarkCyan;
             this.info.Image = ((System.Drawing.Image)(resources.GetObject("info.Image")));
             this.info.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.info.Location = new System.Drawing.Point(39, 539);
+            this.info.Location = new System.Drawing.Point(39, 535);
             this.info.Name = "info";
             this.info.Size = new System.Drawing.Size(244, 64);
             this.info.TabIndex = 20;
@@ -256,13 +257,13 @@
             // Afficher
             // 
             this.Afficher.BackColor = System.Drawing.Color.White;
-            this.Afficher.Font = new System.Drawing.Font("Bahnschrift SemiLight", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Afficher.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Afficher.ForeColor = System.Drawing.Color.DarkCyan;
             this.Afficher.Image = ((System.Drawing.Image)(resources.GetObject("Afficher.Image")));
             this.Afficher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Afficher.Location = new System.Drawing.Point(544, 594);
+            this.Afficher.Location = new System.Drawing.Point(418, 594);
             this.Afficher.Name = "Afficher";
-            this.Afficher.Size = new System.Drawing.Size(244, 64);
+            this.Afficher.Size = new System.Drawing.Size(178, 37);
             this.Afficher.TabIndex = 28;
             this.Afficher.Text = "       Trouver";
             this.Afficher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -326,7 +327,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(405, 582);
+            this.label2.Location = new System.Drawing.Point(425, 582);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 33;
@@ -336,11 +337,27 @@
             this.panel2.BackColor = System.Drawing.Color.Teal;
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(1044, 333);
+            this.panel2.Location = new System.Drawing.Point(1044, 328);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(108, 167);
             this.panel2.TabIndex = 34;
             this.panel2.Visible = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.DarkCyan;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(816, 594);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(178, 37);
+            this.button6.TabIndex = 35;
+            this.button6.Text = "    Mise a jour";
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // FindMember
             // 
@@ -348,6 +365,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1200, 709);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button5);
@@ -406,5 +424,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button6;
     }
 }
