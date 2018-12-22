@@ -52,6 +52,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -225,15 +226,15 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.DarkCyan;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(602, 594);
+            this.button2.Location = new System.Drawing.Point(562, 584);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 37);
+            this.button2.Size = new System.Drawing.Size(150, 37);
             this.button2.TabIndex = 21;
-            this.button2.Text = "  Afficher Tout Les Membres";
+            this.button2.Text = "  Afficher Tout";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -257,21 +258,22 @@
             // Afficher
             // 
             this.Afficher.BackColor = System.Drawing.Color.White;
-            this.Afficher.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Afficher.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Afficher.ForeColor = System.Drawing.Color.DarkCyan;
             this.Afficher.Image = ((System.Drawing.Image)(resources.GetObject("Afficher.Image")));
             this.Afficher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Afficher.Location = new System.Drawing.Point(418, 594);
+            this.Afficher.Location = new System.Drawing.Point(398, 584);
             this.Afficher.Name = "Afficher";
-            this.Afficher.Size = new System.Drawing.Size(178, 37);
+            this.Afficher.Size = new System.Drawing.Size(150, 37);
             this.Afficher.TabIndex = 28;
-            this.Afficher.Text = "       Trouver";
+            this.Afficher.Text = "     Trouver";
             this.Afficher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Afficher.UseVisualStyleBackColor = false;
             this.Afficher.Click += new System.EventHandler(this.Afficher_Click);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(13, 26);
             this.pictureBox2.Name = "pictureBox2";
@@ -346,18 +348,34 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.DarkCyan;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(816, 594);
+            this.button6.Location = new System.Drawing.Point(725, 584);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(178, 37);
+            this.button6.Size = new System.Drawing.Size(150, 37);
             this.button6.TabIndex = 35;
-            this.button6.Text = "    Mise a jour";
+            this.button6.Text = "  Mise a jour";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.White;
+            this.button7.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.DarkCyan;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(886, 584);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(150, 37);
+            this.button7.TabIndex = 36;
+            this.button7.Text = "   Supprimer";
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // FindMember
             // 
@@ -365,6 +383,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1200, 709);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
@@ -425,5 +444,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }

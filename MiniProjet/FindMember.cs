@@ -120,14 +120,14 @@ namespace MiniProjet
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            members.MoveNext();
+            members.MovePrevious();
             UpdatDGV();
             records();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            members.MovePrevious();
+            members.MoveNext();
             UpdatDGV();
             records();
         }
@@ -139,13 +139,19 @@ namespace MiniProjet
         }
         private void records()
         {
-            label2.Text = "Membre "+ (members.Position + 1 ) + " sur " +(members.Count - 1);
+            label2.Text = "Membre "+ (members.Position + 1) + " sur " +(members.Count - 1);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             SqlCommandBuilder scb = new SqlCommandBuilder(sda1);
             sda1.Update(dt1);
+            MessageBox.Show(this, "Modification Effectuée !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

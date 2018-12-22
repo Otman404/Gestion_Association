@@ -103,6 +103,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(12, 24);
             this.pictureBox2.Name = "pictureBox2";
@@ -146,7 +147,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Location = new System.Drawing.Point(250, 146);
+            this.panel2.Location = new System.Drawing.Point(251, 146);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(703, 525);
             this.panel2.TabIndex = 27;
@@ -157,7 +158,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label16.Location = new System.Drawing.Point(349, 209);
+            this.label16.Location = new System.Drawing.Point(349, 292);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(72, 35);
             this.label16.TabIndex = 37;
@@ -169,7 +170,7 @@
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Teal;
-            this.richTextBox1.Location = new System.Drawing.Point(250, 316);
+            this.richTextBox1.Location = new System.Drawing.Point(246, 420);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(432, 60);
             this.richTextBox1.TabIndex = 36;
@@ -181,7 +182,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label15.Location = new System.Drawing.Point(385, 417);
+            this.label15.Location = new System.Drawing.Point(385, 155);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(0, 35);
             this.label15.TabIndex = 35;
@@ -191,7 +192,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Bahnschrift SemiLight", 10F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label14.Location = new System.Drawing.Point(255, 331);
+            this.label14.Location = new System.Drawing.Point(291, 435);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(0, 21);
             this.label14.TabIndex = 34;
@@ -201,7 +202,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label13.Location = new System.Drawing.Point(267, 264);
+            this.label13.Location = new System.Drawing.Point(268, 358);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(0, 35);
             this.label13.TabIndex = 33;
@@ -211,7 +212,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label12.Location = new System.Drawing.Point(267, 209);
+            this.label12.Location = new System.Drawing.Point(267, 292);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(0, 35);
             this.label12.TabIndex = 32;
@@ -221,7 +222,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label11.Location = new System.Drawing.Point(385, 157);
+            this.label11.Location = new System.Drawing.Point(385, 223);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(0, 35);
             this.label11.TabIndex = 31;
@@ -241,7 +242,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(32, 417);
+            this.label6.Location = new System.Drawing.Point(32, 155);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(333, 35);
             this.label6.TabIndex = 28;
@@ -252,7 +253,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(36, 331);
+            this.label7.Location = new System.Drawing.Point(32, 435);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(193, 35);
             this.label7.TabIndex = 27;
@@ -263,7 +264,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(32, 264);
+            this.label8.Location = new System.Drawing.Point(33, 358);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(197, 35);
             this.label8.TabIndex = 26;
@@ -274,7 +275,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(32, 209);
+            this.label3.Location = new System.Drawing.Point(32, 292);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(204, 35);
             this.label3.TabIndex = 25;
@@ -285,7 +286,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(32, 157);
+            this.label4.Location = new System.Drawing.Point(32, 223);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(338, 35);
             this.label4.TabIndex = 24;
