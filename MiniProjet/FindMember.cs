@@ -151,6 +151,23 @@ namespace MiniProjet
 
         private void button7_Click(object sender, EventArgs e)
         {
+            string cin = textBox1.Text;
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Folder\MiniProjet\Gestion_Association\MiniProjet\MiniProjet.mdf;Integrated Security=True;Connect Timeout=30");
+            string query = "Delete from Membre where cin = @cin";
+            SqlDataAdapter sda = new SqlDataAdapter();
+            sda.DeleteCommand = new SqlCommand(query, conn);
+            sda.DeleteCommand.Parameters.Add("@cin", SqlDbType.VarChar).Value = cin;
+            conn.Open();
+            var res = MessageBox.Show(this, "Etes-vous sûr de supprimer ce membre ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if(res == DialogResult.Yes)
+            {
+            sda.DeleteCommand.ExecuteNonQuery();
+            MessageBox.Show(this, "Membre Supprimé !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+            MessageBox.Show(this, "Operation annulée", "Annulation", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
 
         }
     }

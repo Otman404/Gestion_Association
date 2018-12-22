@@ -617,6 +617,7 @@
             this.Controls.Add(this.close);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "addMember";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addMember";
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();

@@ -67,13 +67,13 @@ namespace MiniProjet
         private void button1_Click(object sender, EventArgs e)
         {
 
-            TextBox tb = new TextBox();
-            if (tb != argentTB && string.IsNullOrEmpty(tb.Text))
-            {
-                MessageBox.Show(this, "Certains champs n'ont pas était remplit", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //button1.Enabled = false;
-                return;
-            }
+            //TextBox tb = new TextBox();
+            //if (tb != argentTB && string.IsNullOrEmpty(tb.Text))
+            //{
+            //    MessageBox.Show(this, "Certains champs n'ont pas était remplit", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    //button1.Enabled = false;
+            //    return;
+            //}
 
 
             string nom = nomTB.Text;
@@ -103,16 +103,13 @@ namespace MiniProjet
             SqlDataAdapter sda = new SqlDataAdapter();
             SqlDataAdapter sda1 = new SqlDataAdapter("Select count(*) from [Membre] where cin='" + cin + "'", con);
             DataTable dt = new DataTable();
-            sda.Fill(dt);
+            sda1.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
             {
                 MessageBox.Show(this, "Membre déja inscrit !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-
-          
-
             sda.InsertCommand = new SqlCommand(query,con);
             sda.InsertCommand.Parameters.Add("@nom",SqlDbType.VarChar).Value = nom;
             sda.InsertCommand.Parameters.Add("@prenom", SqlDbType.VarChar).Value = prenom;
@@ -140,7 +137,8 @@ namespace MiniProjet
             sda.InsertCommand.Parameters.Add("@membre_id", SqlDbType.Int).Value = membre_id;
             sda.InsertCommand.Parameters.Add("@methode_payement", SqlDbType.VarChar).Value = methode_pay;
             sda.InsertCommand.Parameters.Add("@somme_argent", SqlDbType.VarChar).Value = somme_arg;
-             
+            
+            sda.InsertCommand.ExecuteNonQuery();
             var mb = MessageBox.Show(this, "Membre Ajouté!", "Operation réussi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             if (mb == DialogResult.OK)
             {

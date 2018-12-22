@@ -230,7 +230,7 @@
             this.button2.ForeColor = System.Drawing.Color.DarkCyan;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(562, 584);
+            this.button2.Location = new System.Drawing.Point(564, 608);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 37);
             this.button2.TabIndex = 21;
@@ -262,7 +262,7 @@
             this.Afficher.ForeColor = System.Drawing.Color.DarkCyan;
             this.Afficher.Image = ((System.Drawing.Image)(resources.GetObject("Afficher.Image")));
             this.Afficher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Afficher.Location = new System.Drawing.Point(398, 584);
+            this.Afficher.Location = new System.Drawing.Point(400, 608);
             this.Afficher.Name = "Afficher";
             this.Afficher.Size = new System.Drawing.Size(150, 37);
             this.Afficher.TabIndex = 28;
@@ -329,7 +329,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(425, 582);
+            this.label2.Location = new System.Drawing.Point(402, 578);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 33;
@@ -352,7 +352,7 @@
             this.button6.ForeColor = System.Drawing.Color.DarkCyan;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(725, 584);
+            this.button6.Location = new System.Drawing.Point(727, 608);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(150, 37);
             this.button6.TabIndex = 35;
@@ -368,7 +368,7 @@
             this.button7.ForeColor = System.Drawing.Color.DarkCyan;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(886, 584);
+            this.button7.Location = new System.Drawing.Point(888, 608);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(150, 37);
             this.button7.TabIndex = 36;
@@ -407,6 +407,7 @@
             this.Controls.Add(this.close);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FindMember";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FindMember";
             this.Load += new System.EventHandler(this.FindMember_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
