@@ -44,6 +44,7 @@ namespace MiniProjet
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
+            records();
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -61,6 +62,8 @@ namespace MiniProjet
             DataSet ds = new DataSet();
             sda.Fill(ds);
             members.DataSource = ds.Tables[0];
+            records();
+            panel2.Visible = true;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -118,17 +121,24 @@ namespace MiniProjet
         {
             members.MoveNext();
             UpdatDGV();
+            records();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             members.MovePrevious();
             UpdatDGV();
+            records();
         }
         private void UpdatDGV()
         {
             dataGridView1.ClearSelection();
             dataGridView1.Rows[members.Position].Selected = true;
+            records();
+        }
+        private void records()
+        {
+            label2.Text = "Membre "+ (members.Position + 1 ) + " sur " +(members.Count - 1);
         }
     }
 }
