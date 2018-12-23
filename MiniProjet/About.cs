@@ -26,11 +26,10 @@ namespace MiniProjet
             this.label5.Text = ds.Tables[0].Rows[0][1].ToString();
             this.label10.Text = ds.Tables[0].Rows[0][2].ToString();
             this.label11.Text = ds.Tables[0].Rows[0][3].ToString();
-            this.label12.Text = ds.Tables[0].Rows[0][4].ToString();
+            this.label12.Text = ds.Tables[0].Rows[0][4].ToString() + " DHs";
             this.label13.Text = ds.Tables[0].Rows[0][5].ToString();
-            this.richTextBox1.Text = ds.Tables[0].Rows[0][6].ToString();
+            this.richTextBox1.Text = ds.Tables[0].Rows[0][6].ToString();          
             this.label15.Text = ds.Tables[0].Rows[0][7].ToString();
-
         }
         
         private void label1_Click(object sender, EventArgs e)
@@ -81,6 +80,11 @@ namespace MiniProjet
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
             
+        }
+
+        private void About_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

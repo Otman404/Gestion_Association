@@ -36,10 +36,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -58,7 +56,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.GreenYellow;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(172)))), ((int)(((byte)(224)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -131,10 +129,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.richTextBox1);
             this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label11);
@@ -147,62 +143,39 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Location = new System.Drawing.Point(251, 146);
+            this.panel2.Location = new System.Drawing.Point(12, 146);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(703, 525);
+            this.panel2.Size = new System.Drawing.Size(1194, 525);
             this.panel2.TabIndex = 27;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label16.Location = new System.Drawing.Point(349, 292);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(72, 35);
-            this.label16.TabIndex = 37;
-            this.label16.Text = "DHs";
-            // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.Honeydew;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.ForeColor = System.Drawing.Color.Teal;
-            this.richTextBox1.Location = new System.Drawing.Point(246, 420);
+            this.richTextBox1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
+            this.richTextBox1.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.richTextBox1.Location = new System.Drawing.Point(385, 407);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(432, 60);
-            this.richTextBox1.TabIndex = 36;
+            this.richTextBox1.Size = new System.Drawing.Size(790, 96);
+            this.richTextBox1.TabIndex = 38;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label15.ForeColor = System.Drawing.Color.DarkTurquoise;
             this.label15.Location = new System.Drawing.Point(385, 155);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(0, 35);
             this.label15.TabIndex = 35;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Bahnschrift SemiLight", 10F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label14.Location = new System.Drawing.Point(291, 435);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(0, 21);
-            this.label14.TabIndex = 34;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label13.Location = new System.Drawing.Point(268, 358);
+            this.label13.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.label13.Location = new System.Drawing.Point(386, 358);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(0, 35);
             this.label13.TabIndex = 33;
@@ -211,8 +184,8 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label12.Location = new System.Drawing.Point(267, 292);
+            this.label12.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.label12.Location = new System.Drawing.Point(385, 292);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(0, 35);
             this.label12.TabIndex = 32;
@@ -221,7 +194,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label11.ForeColor = System.Drawing.Color.DarkTurquoise;
             this.label11.Location = new System.Drawing.Point(385, 223);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(0, 35);
@@ -231,7 +204,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label5.ForeColor = System.Drawing.Color.DarkTurquoise;
             this.label5.Location = new System.Drawing.Point(385, 39);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 35);
@@ -319,8 +292,8 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Bahnschrift SemiLight", 17F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label10.Location = new System.Drawing.Point(230, 100);
+            this.label10.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.label10.Location = new System.Drawing.Point(385, 100);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(0, 35);
             this.label10.TabIndex = 30;
@@ -329,7 +302,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Teal;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(112)))), ((int)(((byte)(147)))));
             this.ClientSize = new System.Drawing.Size(1218, 756);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
@@ -339,8 +312,11 @@
             this.Controls.Add(this.maximize);
             this.Controls.Add(this.close);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "About";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
+            this.Load += new System.EventHandler(this.About_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -366,13 +342,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label16;
     }
 }
