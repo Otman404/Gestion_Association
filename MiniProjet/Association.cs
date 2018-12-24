@@ -12,14 +12,15 @@ namespace MiniProjet
     using System;
     using System.Collections.Generic;
     
-    public partial class Donation
+    public partial class Association
     {
-        public int id { get; set; }
-        public int id_membre { get; set; }
-        public int id_payement { get; set; }
-        public decimal Montant { get; set; }
-    
-        public virtual Membre Membre { get; set; }
-        public virtual Payement Payement { get; set; }
+        public int AssocID { get; set; }
+        public string AssocName { get; set; }
+        public string addresse { get; set; }
+        public int Nbrs_de_Membres { get; set; }
+        public decimal budget_total { get; set; }
+        public string code_postal { get; set; }
+        public string description { get; set; }
+        public string num_tele { get; set; }
     }
 }

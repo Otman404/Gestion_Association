@@ -12,14 +12,12 @@ namespace MiniProjet
     using System;
     using System.Collections.Generic;
     
-    public partial class Donation
+    public partial class sysdiagrams
     {
-        public int id { get; set; }
-        public int id_membre { get; set; }
-        public int id_payement { get; set; }
-        public decimal Montant { get; set; }
-    
-        public virtual Membre Membre { get; set; }
-        public virtual Payement Payement { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

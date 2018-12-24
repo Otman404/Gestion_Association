@@ -57,5 +57,12 @@ namespace MiniProjet
             dataGridView1.DataSource = dt;
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GestionAssoc ga = new GestionAssoc();
+            ga.Show();
+        }
     }
 }

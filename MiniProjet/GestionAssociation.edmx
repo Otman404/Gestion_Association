@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MiniProjetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ADMIN">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Association">
+          <Key>
+            <PropertyRef Name="AssocID" />
+          </Key>
+          <Property Name="AssocID" Type="int" Nullable="false" />
+          <Property Name="AssocName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="addresse" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nbrs_de_Membres" Type="int" Nullable="false" />
+          <Property Name="budget_total" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="code_postal" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="num_tele" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Donation">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_membre" Type="int" Nullable="false" />
+          <Property Name="id_payement" Type="int" Nullable="false" />
+          <Property Name="Montant" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Membre">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="prenom" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="cin" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ville" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Code_Postal" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="sexe" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="num_tele" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="date_naissance" Type="date" Nullable="false" />
+          <Property Name="lieu_naissance" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="date_inscrip" Type="date" />
+          <Property Name="statut" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="statut_civil" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="position" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="SommeDons" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Payement">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="membre_id" Type="int" Nullable="false" />
+          <Property Name="methode_payement" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="somme_argent" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="date_payement" Type="date" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK__Donation__id_mem__08B54D69">
+          <End Role="Membre" Type="Self.Membre" Multiplicity="1" />
+          <End Role="Donation" Type="Self.Donation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Membre">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Donation">
+              <PropertyRef Name="id_membre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Donation__id_pay__09A971A2">
+          <End Role="Payement" Type="Self.Payement" Multiplicity="1" />
+          <End Role="Donation" Type="Self.Donation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Payement">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Donation">
+              <PropertyRef Name="id_payement" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Payement__membre__245D67DE">
+          <End Role="Membre" Type="Self.Membre" Multiplicity="1" />
+          <End Role="Payement" Type="Self.Payement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Membre">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Payement">
+              <PropertyRef Name="membre_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MiniProjetModelStoreContainer">
+          <EntitySet Name="ADMIN" EntityType="Self.ADMIN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Association" EntityType="Self.Association" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Donation" EntityType="Self.Donation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Membre" EntityType="Self.Membre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Payement" EntityType="Self.Payement" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Donation__id_mem__08B54D69" Association="Self.FK__Donation__id_mem__08B54D69">
+            <End Role="Membre" EntitySet="Membre" />
+            <End Role="Donation" EntitySet="Donation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Donation__id_pay__09A971A2" Association="Self.FK__Donation__id_pay__09A971A2">
+            <End Role="Payement" EntitySet="Payement" />
+            <End Role="Donation" EntitySet="Donation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Payement__membre__245D67DE" Association="Self.FK__Payement__membre__245D67DE">
+            <End Role="Membre" EntitySet="Membre" />
+            <End Role="Payement" EntitySet="Payement" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MiniProjetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ADMIN">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Association">
+          <Key>
+            <PropertyRef Name="AssocID" />
+          </Key>
+          <Property Name="AssocID" Type="Int32" Nullable="false" />
+          <Property Name="AssocName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="addresse" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nbrs_de_Membres" Type="Int32" Nullable="false" />
+          <Property Name="budget_total" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="code_postal" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="num_tele" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Donation">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_membre" Type="Int32" Nullable="false" />
+          <Property Name="id_payement" Type="Int32" Nullable="false" />
+          <Property Name="Montant" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <NavigationProperty Name="Membre" Relationship="Self.FK__Donation__id_mem__08B54D69" FromRole="Donation" ToRole="Membre" />
+          <NavigationProperty Name="Payement" Relationship="Self.FK__Donation__id_pay__09A971A2" FromRole="Donation" ToRole="Payement" />
+        </EntityType>
+        <EntityType Name="Membre">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="prenom" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ville" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Code_Postal" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sexe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="num_tele" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="date_naissance" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="lieu_naissance" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="date_inscrip" Type="DateTime" Precision="0" />
+          <Property Name="statut" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="statut_civil" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="position" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SommeDons" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="Donation" Relationship="Self.FK__Donation__id_mem__08B54D69" FromRole="Membre" ToRole="Donation" />
+          <NavigationProperty Name="Payement" Relationship="Self.FK__Payement__membre__245D67DE" FromRole="Membre" ToRole="Payement" />
+        </EntityType>
+        <EntityType Name="Payement">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="membre_id" Type="Int32" Nullable="false" />
+          <Property Name="methode_payement" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="somme_argent" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="date_payement" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Donation" Relationship="Self.FK__Donation__id_pay__09A971A2" FromRole="Payement" ToRole="Donation" />
+          <NavigationProperty Name="Membre" Relationship="Self.FK__Payement__membre__245D67DE" FromRole="Payement" ToRole="Membre" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK__Donation__id_mem__08B54D69">
+          <End Role="Membre" Type="Self.Membre" Multiplicity="1" />
+          <End Role="Donation" Type="Self.Donation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Membre">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Donation">
+              <PropertyRef Name="id_membre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Donation__id_pay__09A971A2">
+          <End Role="Payement" Type="Self.Payement" Multiplicity="1" />
+          <End Role="Donation" Type="Self.Donation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Payement">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Donation">
+              <PropertyRef Name="id_payement" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Payement__membre__245D67DE">
+          <End Role="Membre" Type="Self.Membre" Multiplicity="1" />
+          <End Role="Payement" Type="Self.Payement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Membre">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Payement">
+              <PropertyRef Name="membre_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MiniProjetEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ADMIN" EntityType="Self.ADMIN" />
+          <EntitySet Name="Association" EntityType="Self.Association" />
+          <EntitySet Name="Donation" EntityType="Self.Donation" />
+          <EntitySet Name="Membre" EntityType="Self.Membre" />
+          <EntitySet Name="Payement" EntityType="Self.Payement" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <AssociationSet Name="FK__Donation__id_mem__08B54D69" Association="Self.FK__Donation__id_mem__08B54D69">
+            <End Role="Membre" EntitySet="Membre" />
+            <End Role="Donation" EntitySet="Donation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Donation__id_pay__09A971A2" Association="Self.FK__Donation__id_pay__09A971A2">
+            <End Role="Payement" EntitySet="Payement" />
+            <End Role="Donation" EntitySet="Donation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Payement__membre__245D67DE" Association="Self.FK__Payement__membre__245D67DE">
+            <End Role="Membre" EntitySet="Membre" />
+            <End Role="Payement" EntitySet="Payement" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MiniProjetModelStoreContainer" CdmEntityContainer="MiniProjetEntities">
+          <EntitySetMapping Name="ADMIN">
+            <EntityTypeMapping TypeName="MiniProjetModel.ADMIN">
+              <MappingFragment StoreEntitySet="ADMIN">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Association">
+            <EntityTypeMapping TypeName="MiniProjetModel.Association">
+              <MappingFragment StoreEntitySet="Association">
+                <ScalarProperty Name="AssocID" ColumnName="AssocID" />
+                <ScalarProperty Name="AssocName" ColumnName="AssocName" />
+                <ScalarProperty Name="addresse" ColumnName="addresse" />
+                <ScalarProperty Name="Nbrs_de_Membres" ColumnName="Nbrs_de_Membres" />
+                <ScalarProperty Name="budget_total" ColumnName="budget_total" />
+                <ScalarProperty Name="code_postal" ColumnName="code_postal" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="num_tele" ColumnName="num_tele" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Donation">
+            <EntityTypeMapping TypeName="MiniProjetModel.Donation">
+              <MappingFragment StoreEntitySet="Donation">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_membre" ColumnName="id_membre" />
+                <ScalarProperty Name="id_payement" ColumnName="id_payement" />
+                <ScalarProperty Name="Montant" ColumnName="Montant" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Membre">
+            <EntityTypeMapping TypeName="MiniProjetModel.Membre">
+              <MappingFragment StoreEntitySet="Membre">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+                <ScalarProperty Name="prenom" ColumnName="prenom" />
+                <ScalarProperty Name="cin" ColumnName="cin" />
+                <ScalarProperty Name="ville" ColumnName="ville" />
+                <ScalarProperty Name="Code_Postal" ColumnName="Code_Postal" />
+                <ScalarProperty Name="sexe" ColumnName="sexe" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="num_tele" ColumnName="num_tele" />
+                <ScalarProperty Name="date_naissance" ColumnName="date_naissance" />
+                <ScalarProperty Name="lieu_naissance" ColumnName="lieu_naissance" />
+                <ScalarProperty Name="date_inscrip" ColumnName="date_inscrip" />
+                <ScalarProperty Name="statut" ColumnName="statut" />
+                <ScalarProperty Name="statut_civil" ColumnName="statut_civil" />
+                <ScalarProperty Name="position" ColumnName="position" />
+                <ScalarProperty Name="SommeDons" ColumnName="SommeDons" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payement">
+            <EntityTypeMapping TypeName="MiniProjetModel.Payement">
+              <MappingFragment StoreEntitySet="Payement">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="membre_id" ColumnName="membre_id" />
+                <ScalarProperty Name="methode_payement" ColumnName="methode_payement" />
+                <ScalarProperty Name="somme_argent" ColumnName="somme_argent" />
+                <ScalarProperty Name="date_payement" ColumnName="date_payement" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="MiniProjetModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

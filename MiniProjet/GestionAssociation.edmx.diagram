@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e516d8dae9964bcdb4d5c4ee3568b3d3" Name="Diagram1">
+        <EntityTypeShape EntityType="MiniProjetModel.ADMIN" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniProjetModel.Association" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniProjetModel.Donation" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniProjetModel.Membre" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniProjetModel.Payement" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiniProjetModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.625" IsExpanded="true" />
+        <AssociationConnector Association="MiniProjetModel.FK__Donation__id_mem__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniProjetModel.FK__Donation__id_pay__09A971A2" ManuallyRouted="false" />
+        <AssociationConnector Association="MiniProjetModel.FK__Payement__membre__245D67DE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
