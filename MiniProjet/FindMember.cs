@@ -134,7 +134,15 @@ namespace MiniProjet
         private void UpdatDGV()
         {
             dataGridView1.ClearSelection();
+            try
+            {
             dataGridView1.Rows[members.Position].Selected = true;
+            }
+            catch
+            {
+                MessageBox.Show("Donnés Insufissance","Erreur",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
             records();
         }
         private void records()
@@ -169,6 +177,13 @@ namespace MiniProjet
             MessageBox.Show(this, "Operation annulée", "Annulation", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ShowDonations sd = new ShowDonations();
+            sd.Show();
         }
     }
 }

@@ -13,6 +13,7 @@ namespace MiniProjet
 {
     public partial class ShowDonations : Form
     {
+        BindingSource dons = new BindingSource();
         public ShowDonations()
         {
             InitializeComponent();
@@ -42,8 +43,11 @@ namespace MiniProjet
             SqlDataAdapter sda = new SqlDataAdapter("select * from Donation", conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            dons.DataSource = ds.Tables[0];
             dataGridView1.DataSource = dt;
-            
+            panel2.Visible = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -57,5 +61,43 @@ namespace MiniProjet
             dataGridView1.DataSource = dt;
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GestionAssoc ga = new GestionAssoc();
+            ga.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            dons.MovePrevious();
+            UpdatDGV();
+            records();
+        }
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            dons.MoveNext();
+            UpdatDGV();
+            records();
+        }
+        private void records()
+        {
+            label3.Text = "Membre " + (dons.Position + 1) + " sur " + (dons.Count - 1);
+        }
+        private void UpdatDGV()
+        {
+            dataGridView1.ClearSelection();
+            try
+            {
+                dataGridView1.Rows[dons.Position].Selected = true;
+            }
+            catch
+            {
+                MessageBox.Show("Donnés Insufissance", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            records();
+        }
+
     }
 }
