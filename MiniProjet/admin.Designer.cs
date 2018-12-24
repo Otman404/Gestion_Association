@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin));
-            this.label1 = new System.Windows.Forms.Label();
             this.minimize = new System.Windows.Forms.Button();
             this.maximize = new System.Windows.Forms.Button();
             this.close = new System.Windows.Forms.Button();
@@ -47,30 +46,19 @@
             this.loginLabel = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(335, 53);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(487, 42);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Gestion D\'une Association";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // minimize
             // 
+            this.minimize.FlatAppearance.BorderSize = 0;
             this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimize.ForeColor = System.Drawing.Color.Transparent;
             this.minimize.Image = ((System.Drawing.Image)(resources.GetObject("minimize.Image")));
-            this.minimize.Location = new System.Drawing.Point(978, 3);
+            this.minimize.Location = new System.Drawing.Point(991, 3);
             this.minimize.Name = "minimize";
             this.minimize.Size = new System.Drawing.Size(75, 64);
             this.minimize.TabIndex = 15;
@@ -79,10 +67,11 @@
             // 
             // maximize
             // 
+            this.maximize.FlatAppearance.BorderSize = 0;
             this.maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maximize.ForeColor = System.Drawing.Color.Transparent;
             this.maximize.Image = ((System.Drawing.Image)(resources.GetObject("maximize.Image")));
-            this.maximize.Location = new System.Drawing.Point(1059, 3);
+            this.maximize.Location = new System.Drawing.Point(1066, 3);
             this.maximize.Name = "maximize";
             this.maximize.Size = new System.Drawing.Size(75, 64);
             this.maximize.TabIndex = 14;
@@ -91,10 +80,11 @@
             // 
             // close
             // 
+            this.close.FlatAppearance.BorderSize = 0;
             this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close.ForeColor = System.Drawing.Color.Transparent;
             this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
-            this.close.Location = new System.Drawing.Point(1140, 3);
+            this.close.Location = new System.Drawing.Point(1141, 3);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(75, 64);
             this.close.TabIndex = 13;
@@ -131,6 +121,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(464, 319);
             this.pictureBox2.Name = "pictureBox2";
@@ -143,22 +134,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 330);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 17);
+            this.label3.Size = new System.Drawing.Size(145, 18);
             this.label3.TabIndex = 27;
-            this.label3.Text = "Mot de passe     :";
+            this.label3.Text = "Mot de passe      :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 257);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 17);
+            this.label2.Size = new System.Drawing.Size(145, 18);
             this.label2.TabIndex = 26;
             this.label2.Text = "Nom d\'utilisateur :";
             // 
@@ -193,6 +184,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Location = new System.Drawing.Point(329, 472);
             this.linkLabel1.Name = "linkLabel1";
@@ -219,6 +211,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.checkBox1.Location = new System.Drawing.Point(40, 470);
@@ -261,6 +254,19 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(445, 52);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(306, 42);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Connectez-vous";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // admin
             // 
             this.AcceptButton = this.button1;
@@ -278,6 +284,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UserControl1_KeyDown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UserControl1_MouseDown);
@@ -291,8 +298,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button minimize;
         private System.Windows.Forms.Button maximize;
         private System.Windows.Forms.Button close;
@@ -309,5 +314,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
     }
 }

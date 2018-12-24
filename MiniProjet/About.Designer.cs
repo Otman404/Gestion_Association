@@ -65,10 +65,11 @@
             // 
             // minimize
             // 
+            this.minimize.FlatAppearance.BorderSize = 0;
             this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimize.ForeColor = System.Drawing.Color.Transparent;
             this.minimize.Image = ((System.Drawing.Image)(resources.GetObject("minimize.Image")));
-            this.minimize.Location = new System.Drawing.Point(980, 10);
+            this.minimize.Location = new System.Drawing.Point(995, 9);
             this.minimize.Name = "minimize";
             this.minimize.Size = new System.Drawing.Size(75, 64);
             this.minimize.TabIndex = 17;
@@ -77,10 +78,11 @@
             // 
             // maximize
             // 
+            this.maximize.FlatAppearance.BorderSize = 0;
             this.maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maximize.ForeColor = System.Drawing.Color.Transparent;
             this.maximize.Image = ((System.Drawing.Image)(resources.GetObject("maximize.Image")));
-            this.maximize.Location = new System.Drawing.Point(1061, 10);
+            this.maximize.Location = new System.Drawing.Point(1069, 9);
             this.maximize.Name = "maximize";
             this.maximize.Size = new System.Drawing.Size(75, 64);
             this.maximize.TabIndex = 16;
@@ -89,10 +91,11 @@
             // 
             // close
             // 
+            this.close.FlatAppearance.BorderSize = 0;
             this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close.ForeColor = System.Drawing.Color.Transparent;
             this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
-            this.close.Location = new System.Drawing.Point(1142, 10);
+            this.close.Location = new System.Drawing.Point(1143, 9);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(75, 64);
             this.close.TabIndex = 15;
@@ -102,6 +105,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(12, 24);
             this.pictureBox2.Name = "pictureBox2";

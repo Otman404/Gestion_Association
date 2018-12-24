@@ -49,6 +49,7 @@
             // Afficher
             // 
             this.Afficher.BackColor = System.Drawing.Color.White;
+            this.Afficher.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Afficher.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Afficher.ForeColor = System.Drawing.Color.DarkCyan;
             this.Afficher.Image = ((System.Drawing.Image)(resources.GetObject("Afficher.Image")));
@@ -65,6 +66,7 @@
             // info
             // 
             this.info.BackColor = System.Drawing.Color.White;
+            this.info.Cursor = System.Windows.Forms.Cursors.Hand;
             this.info.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.info.ForeColor = System.Drawing.Color.DarkCyan;
             this.info.Image = ((System.Drawing.Image)(resources.GetObject("info.Image")));
@@ -81,6 +83,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.DarkCyan;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
@@ -97,6 +100,7 @@
             // ajouter
             // 
             this.ajouter.BackColor = System.Drawing.Color.White;
+            this.ajouter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ajouter.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ajouter.ForeColor = System.Drawing.Color.DarkCyan;
             this.ajouter.Image = ((System.Drawing.Image)(resources.GetObject("ajouter.Image")));
@@ -128,6 +132,7 @@
             // 
             this.facebook.BackColor = System.Drawing.Color.White;
             this.facebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.facebook.Cursor = System.Windows.Forms.Cursors.Hand;
             this.facebook.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
             this.facebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.facebook.Image = ((System.Drawing.Image)(resources.GetObject("facebook.Image")));
@@ -142,6 +147,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
@@ -155,6 +161,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.White;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
@@ -166,10 +173,11 @@
             // 
             // close
             // 
+            this.close.FlatAppearance.BorderSize = 0;
             this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close.ForeColor = System.Drawing.Color.Transparent;
             this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
-            this.close.Location = new System.Drawing.Point(1144, 9);
+            this.close.Location = new System.Drawing.Point(1141, 8);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(75, 64);
             this.close.TabIndex = 10;
@@ -178,10 +186,11 @@
             // 
             // maximize
             // 
+            this.maximize.FlatAppearance.BorderSize = 0;
             this.maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maximize.ForeColor = System.Drawing.Color.Transparent;
             this.maximize.Image = ((System.Drawing.Image)(resources.GetObject("maximize.Image")));
-            this.maximize.Location = new System.Drawing.Point(1063, 9);
+            this.maximize.Location = new System.Drawing.Point(1067, 8);
             this.maximize.Name = "maximize";
             this.maximize.Size = new System.Drawing.Size(75, 64);
             this.maximize.TabIndex = 11;
@@ -190,10 +199,11 @@
             // 
             // minimize
             // 
+            this.minimize.FlatAppearance.BorderSize = 0;
             this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimize.ForeColor = System.Drawing.Color.Transparent;
             this.minimize.Image = ((System.Drawing.Image)(resources.GetObject("minimize.Image")));
-            this.minimize.Location = new System.Drawing.Point(982, 9);
+            this.minimize.Location = new System.Drawing.Point(992, 8);
             this.minimize.Name = "minimize";
             this.minimize.Size = new System.Drawing.Size(75, 64);
             this.minimize.TabIndex = 12;
@@ -223,6 +233,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.DarkCyan;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
