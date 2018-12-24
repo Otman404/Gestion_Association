@@ -139,5 +139,12 @@ namespace MiniProjet
         {
 
         }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            this.Hide();
+            ShowDonations sd = new ShowDonations();
+            sd.Show();
+        }
     }
 }
