@@ -83,6 +83,12 @@
     <Compile Include="addMember.Designer.cs">
       <DependentUpon>addMember.cs</DependentUpon>
     </Compile>
+    <Compile Include="Adhesions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adhesions.Designer.cs">
+      <DependentUpon>Adhesions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Donation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addMember.resx">
       <DependentUpon>addMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adhesions.resx">
+      <DependentUpon>Adhesions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Donation.resx">
       <DependentUpon>Donation.cs</DependentUpon>

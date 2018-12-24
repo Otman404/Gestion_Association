@@ -120,5 +120,40 @@ namespace MiniProjet
         {
             this.Dispose();
         }
+
+        private void Afficher_Click(object sender, EventArgs e)
+        {
+            FindMember fm = new FindMember();
+            this.Hide();
+            fm.Show();
+        }
+
+        private void ajouter_Click(object sender, EventArgs e)
+        {
+            addMember am = new addMember();
+            this.Hide();
+            am.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ShowDonations sd = new ShowDonations();
+            sd.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Adhesions ad = new Adhesions();
+            ad.Show();
+        }
+
+        private void info_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            About a = new About();
+            a.Show();
+        }
     }
 }

@@ -302,7 +302,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("MS Reference Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Yellow;
-            this.label11.Location = new System.Drawing.Point(442, 49);
+            this.label11.Location = new System.Drawing.Point(474, 65);
             this.label11.Name = "label11";
             this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label11.Size = new System.Drawing.Size(212, 42);
@@ -589,7 +589,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(149, 162);
+            this.tabControl1.Location = new System.Drawing.Point(183, 168);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(806, 531);

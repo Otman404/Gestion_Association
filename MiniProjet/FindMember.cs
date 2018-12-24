@@ -185,5 +185,12 @@ namespace MiniProjet
             ShowDonations sd = new ShowDonations();
             sd.Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Adhesions ad = new Adhesions();
+            this.Hide();
+            ad.Show();
+        }
     }
 }

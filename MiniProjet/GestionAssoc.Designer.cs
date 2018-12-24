@@ -43,6 +43,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,7 +137,7 @@
             this.facebook.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
             this.facebook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.facebook.Image = ((System.Drawing.Image)(resources.GetObject("facebook.Image")));
-            this.facebook.Location = new System.Drawing.Point(84, 708);
+            this.facebook.Location = new System.Drawing.Point(90, 708);
             this.facebook.Name = "facebook";
             this.facebook.Size = new System.Drawing.Size(44, 36);
             this.facebook.TabIndex = 7;
@@ -151,7 +152,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(147, 708);
+            this.button1.Location = new System.Drawing.Point(153, 708);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(44, 36);
             this.button1.TabIndex = 8;
@@ -165,7 +166,7 @@
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(210, 708);
+            this.button4.Location = new System.Drawing.Point(216, 708);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(44, 36);
             this.button4.TabIndex = 9;
@@ -247,12 +248,30 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_2);
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.DarkCyan;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(54, 523);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(244, 64);
+            this.button5.TabIndex = 16;
+            this.button5.Text = "            Adhésions";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_2);
+            // 
             // GestionAssoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(112)))), ((int)(((byte)(147)))));
             this.ClientSize = new System.Drawing.Size(1218, 756);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -297,6 +316,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
     }
 }
 
