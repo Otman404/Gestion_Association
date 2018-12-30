@@ -68,8 +68,6 @@ namespace MiniProjet
             GestionAssoc ga = new GestionAssoc();
             ga.Show();
         }
-<<<<<<< HEAD
-=======
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
@@ -135,6 +133,5 @@ namespace MiniProjet
             About a = new About();
             a.Show();
         }
->>>>>>> hope
     }
 }
