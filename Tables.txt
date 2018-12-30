@@ -1,0 +1,69 @@
+CREATE TABLE [dbo].[Association] (
+    [AssocID]         INT            NOT NULL,
+    [AssocName]       VARCHAR (20)   NOT NULL,
+    [addresse]        VARCHAR (50)   NOT NULL,
+    [Nbrs_de_Membres] INT            NOT NULL,
+    [budget_total]    DECIMAL (18)   NOT NULL,
+    [code_postal]     VARCHAR (20)   NOT NULL,
+    [description]     VARCHAR (1000) NOT NULL,
+    [num_tele]        VARCHAR (20)   NOT NULL,
+    PRIMARY KEY CLUSTERED ([AssocID] ASC)
+);
+
+CREATE TABLE [dbo].[ADMIN] (
+    [id]       INT          IDENTITY (1, 1) NOT NULL,
+    [username] VARCHAR (20) NOT NULL,
+    [password] VARCHAR (20) NOT NULL,
+    PRIMARY KEY CLUSTERED ([id] ASC)
+);
+
+CREATE TABLE [dbo].[Membre] (
+    [id]             INT          IDENTITY (1, 1) NOT NULL,
+    [nom]            VARCHAR (20) NOT NULL,
+    [prenom]         VARCHAR (20) NOT NULL,
+    [cin]            VARCHAR (10) NOT NULL,
+    [ville]          VARCHAR (20) NOT NULL,
+    [Code_Postal]    VARCHAR (20) NOT NULL,
+    [sexe]           CHAR (1)     NOT NULL,
+    [email]          VARCHAR (50) NULL,
+    [num_tele]       VARCHAR (20) NOT NULL,
+    [date_naissance] DATE         NOT NULL,
+    [lieu_naissance] VARCHAR (30) NOT NULL,
+    [statut]         VARCHAR (20) NOT NULL,
+    [statut_civil]   VARCHAR (20) NOT NULL,
+    PRIMARY KEY CLUSTERED ([id] ASC),
+    CONSTRAINT [member_gender] CHECK ([sexe]='M' OR [sexe]='F'),
+    CONSTRAINT [member_status] CHECK ([statut]='Etudiant' OR [statut]='Employé'),
+    CONSTRAINT [statut_civil] CHECK ([statut_civil]='Marié' OR [statut_civil]='Célibataire')
+);
+
+CREATE TABLE [dbo].[Adhesion] (
+    [id]           INT          IDENTITY (1, 1) NOT NULL,
+    [id_membre]    INT          NOT NULL,
+    [date_inscrip] DATE         DEFAULT (getdate()) NOT NULL,
+    [position]     VARCHAR (20) DEFAULT ('Membre') NOT NULL,
+    PRIMARY KEY CLUSTERED ([id] ASC),
+    FOREIGN KEY ([id_membre]) REFERENCES [dbo].[Membre] ([id])
+);
+
+CREATE TABLE [dbo].[Payement] (
+    [id]               INT          IDENTITY (1, 1) NOT NULL,
+    [membre_id]        INT          NOT NULL,
+    [methode_payement] VARCHAR (20) DEFAULT ('Espèce') NOT NULL,
+    [somme_argent]     DECIMAL (18) NOT NULL,
+    [date_payement]    DATE         DEFAULT (getdate()) NULL,
+    PRIMARY KEY CLUSTERED ([id] ASC),
+    FOREIGN KEY ([membre_id]) REFERENCES [dbo].[Membre] ([id]),
+    CONSTRAINT [type_payement] CHECK ([methode_payement]='Espèce' OR [methode_payement]='Paypal' OR [methode_payement]='Chèque' OR [methode_payement]='Carte Bancaire')
+);
+
+
+CREATE TABLE [dbo].[Donation] (
+    [id]          INT          IDENTITY (1, 1) NOT NULL,
+    [id_membre]   INT          NOT NULL,
+    [id_payement] INT          NOT NULL,
+    [Montant]     DECIMAL (18) NOT NULL,
+    PRIMARY KEY CLUSTERED ([id] ASC),
+    FOREIGN KEY ([id_membre]) REFERENCES [dbo].[Membre] ([id]),
+    FOREIGN KEY ([id_payement]) REFERENCES [dbo].[Payement] ([id])
+);

@@ -35,6 +35,8 @@
             this.close = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.username = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,10 +45,8 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.password = new System.Windows.Forms.TextBox();
             this.loginLabel = new System.Windows.Forms.Label();
-            this.username = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -104,6 +104,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(172)))), ((int)(((byte)(224)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.username);
             this.panel2.Controls.Add(this.checkBox1);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label3);
@@ -113,11 +114,32 @@
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.password);
             this.panel2.Controls.Add(this.loginLabel);
-            this.panel2.Controls.Add(this.username);
             this.panel2.Location = new System.Drawing.Point(342, 140);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(516, 565);
             this.panel2.TabIndex = 17;
+            // 
+            // username
+            // 
+            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Location = new System.Drawing.Point(149, 252);
+            this.username.Multiline = true;
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(298, 34);
+            this.username.TabIndex = 30;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.checkBox1.Location = new System.Drawing.Point(30, 471);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(169, 21);
+            this.checkBox1.TabIndex = 29;
+            this.checkBox1.Text = "Se souvenir de moi";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -221,19 +243,6 @@
             this.loginLabel.Text = "Admin";
             this.loginLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // username
-            // 
-            this.username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.username.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.ForeColor = System.Drawing.Color.Black;
-            this.username.Location = new System.Drawing.Point(149, 252);
-            this.username.Multiline = true;
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(298, 38);
-            this.username.TabIndex = 0;
-            this.username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -252,19 +261,6 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Connectez-vous";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.checkBox1.Location = new System.Drawing.Point(30, 471);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(169, 21);
-            this.checkBox1.TabIndex = 29;
-            this.checkBox1.Text = "Se souvenir de moi";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // admin
             // 
@@ -303,7 +299,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label loginLabel;
         private System.Windows.Forms.LinkLabel linkLabel1;
@@ -314,5 +309,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox username;
     }
 }
