@@ -47,21 +47,25 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework">
       <HintPath>..\..\winforms-modernui\MetroFramework.Demo\bin\Debug\MetroFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -85,8 +89,11 @@
     <Compile Include="addMember.Designer.cs">
       <DependentUpon>addMember.cs</DependentUpon>
     </Compile>
-    <Compile Include="Association.cs">
-      <DependentUpon>GestionAssociation.tt</DependentUpon>
+    <Compile Include="Adhesions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adhesions.Designer.cs">
+      <DependentUpon>Adhesions.cs</DependentUpon>
     </Compile>
     <Compile Include="Donation.cs">
       <DependentUpon>GestionAssociation.tt</DependentUpon>
@@ -143,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addMember.resx">
       <DependentUpon>addMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adhesions.resx">
+      <DependentUpon>Adhesions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Donation.resx">
       <DependentUpon>Donation.cs</DependentUpon>

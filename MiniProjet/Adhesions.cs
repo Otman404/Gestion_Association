@@ -11,12 +11,17 @@ using System.Data.SqlClient;
 
 namespace MiniProjet
 {
-    public partial class ShowDonations : Form
+    public partial class Adhesions : Form
     {
         BindingSource dons = new BindingSource();
-        public ShowDonations()
+        public Adhesions()
         {
             InitializeComponent();
+        }
+
+        private void Adhesions_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -36,41 +41,6 @@ namespace MiniProjet
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Folder\MiniProjet\Gestion_Association\MiniProjet\MiniProjet.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("select * from Donation", conn);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            DataSet ds = new DataSet();
-            sda.Fill(ds);
-            dons.DataSource = ds.Tables[0];
-            dataGridView1.DataSource = dt;
-            panel2.Visible = true;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            string cin = textBox1.Text;
-            string query = "Select * from Donation where Donation.id_membre in (select id from membre where cin Like '%"+cin+"%')";
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Folder\MiniProjet\Gestion_Association\MiniProjet\MiniProjet.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter(query,conn);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView1.DataSource = dt;
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            GestionAssoc ga = new GestionAssoc();
-            ga.Show();
-        }
-<<<<<<< HEAD
-=======
-
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             dons.MovePrevious();
@@ -101,6 +71,37 @@ namespace MiniProjet
             records();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Folder\MiniProjet\Gestion_Association\MiniProjet\MiniProjet.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlDataAdapter sda = new SqlDataAdapter("select * from Adhesion", conn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            dons.DataSource = ds.Tables[0];
+            dataGridView1.DataSource = dt;
+            panel2.Visible = true;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            string cin = textBox1.Text;
+            string query = "Select * from Adhesion where Adhesion.id_membre in (select id from membre where cin Like '%" + cin + "%')";
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Folder\MiniProjet\Gestion_Association\MiniProjet\MiniProjet.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlDataAdapter sda = new SqlDataAdapter(query, conn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GestionAssoc ga = new GestionAssoc();
+            ga.Show();
+        }
+
         private void Afficher_Click(object sender, EventArgs e)
         {
             FindMember fm = new FindMember();
@@ -122,11 +123,11 @@ namespace MiniProjet
             fm.Show();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Adhesions ad = new Adhesions();
-            ad.Show();
+            ShowDonations sd = new ShowDonations();
+            sd.Show();
         }
 
         private void info_Click(object sender, EventArgs e)
@@ -135,6 +136,5 @@ namespace MiniProjet
             About a = new About();
             a.Show();
         }
->>>>>>> hope
     }
 }

@@ -97,7 +97,7 @@ namespace MiniProjet
             
 
             //string query = "insert into MEMBRE (nom,prenom,cin,ville,Code_Postal,sexe,email,num_tele,date_naissance,lieu_naissance,statut,statut_civil,position) values('"+ nom + "','"+ prenom + "','"+ cin + "','"+ ville + "','"+ code_postal + "','"+ sexe + "','"+ email + "','"+ tele + "','"+ date_naiss + "','"+ lieu_naiss + "','"+ statut + "','"+ statut_civil + "','"+ position+"')";
-            string query = "insert into MEMBRE (nom,prenom,cin,ville,Code_Postal,sexe,email,num_tele,date_naissance,lieu_naissance,statut,statut_civil,position) values(@nom,@prenom,@cin,@ville,@code_postal,@sexe,@email,@tele,@date_naiss,@lieu_naiss,@statut,@statut_civil,@position)";
+            string query = "insert into MEMBRE (nom,prenom,cin,ville,Code_Postal,sexe,email,num_tele,date_naissance,lieu_naissance,statut,statut_civil) values(@nom,@prenom,@cin,@ville,@code_postal,@sexe,@email,@tele,@date_naiss,@lieu_naiss,@statut,@statut_civil)";
 
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Folder\MiniProjet\Gestion_Association\MiniProjet\MiniProjet.mdf;Integrated Security=True;Connect Timeout=30");
             SqlDataAdapter sda = new SqlDataAdapter();
@@ -123,29 +123,38 @@ namespace MiniProjet
             sda.InsertCommand.Parameters.Add("@lieu_naiss", SqlDbType.VarChar).Value = lieu_naiss;
             sda.InsertCommand.Parameters.Add("@statut", SqlDbType.VarChar).Value = statut;
             sda.InsertCommand.Parameters.Add("@statut_civil", SqlDbType.VarChar).Value = statut_civil;
-            sda.InsertCommand.Parameters.Add("@position", SqlDbType.VarChar).Value = position;
             con.Open();
-            sda.InsertCommand.ExecuteNonQuery();
+                try
+                {
+                     sda.InsertCommand.ExecuteNonQuery();
+                     DataSet ds = new DataSet();
+                     sda = new SqlDataAdapter("select MAX(id) from MEMBRE", con);
+                     sda.Fill(ds, "member_id");
+                     int membre_id = int.Parse(ds.Tables["member_id"].Rows[0][0].ToString());
+                     query = "insert into Adhesion(id_membre,position) values (@membre_id,@position)";
+                     sda.InsertCommand = new SqlCommand(query, con);
+                     sda.InsertCommand.Parameters.Add("@membre_id", SqlDbType.Int).Value = membre_id;
+                     sda.InsertCommand.Parameters.Add("@position", SqlDbType.VarChar).Value = position;
+                     sda.InsertCommand.ExecuteNonQuery();
+                     query = "insert into Payement (membre_id,methode_payement,somme_argent) values (@membre_id,@methode_payement,@somme_argent)";
+                     sda.InsertCommand = new SqlCommand(query, con);
+                     sda.InsertCommand.Parameters.Add("@membre_id", SqlDbType.Int).Value = membre_id;
+                     sda.InsertCommand.Parameters.Add("@methode_payement", SqlDbType.VarChar).Value = methode_pay;
+                     sda.InsertCommand.Parameters.Add("@somme_argent", SqlDbType.VarChar).Value = somme_arg;
+               
+                     sda.InsertCommand.ExecuteNonQuery();
+                     var mb = MessageBox.Show(this, "Membre Ajouté!", "Operation réussi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                     if (mb == DialogResult.OK)
+                     {
+                        this.Hide();
+                        GestionAssoc ga = new GestionAssoc();
+                        ga.Show();
+                     }
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Certains champs n'ont pas était remplis");
+                }
 
-            DataSet ds = new DataSet();
-            sda = new SqlDataAdapter("select MAX(id) from MEMBRE", con);
-            sda.Fill(ds, "member_id");
-            int membre_id = int.Parse(ds.Tables["member_id"].Rows[0][0].ToString());
-
-            query = "insert into Payement (membre_id,methode_payement,somme_argent) values (@membre_id,@methode_payement,@somme_argent)";
-            sda.InsertCommand = new SqlCommand(query, con);
-            sda.InsertCommand.Parameters.Add("@membre_id", SqlDbType.Int).Value = membre_id;
-            sda.InsertCommand.Parameters.Add("@methode_payement", SqlDbType.VarChar).Value = methode_pay;
-            sda.InsertCommand.Parameters.Add("@somme_argent", SqlDbType.VarChar).Value = somme_arg;
-            
-            sda.InsertCommand.ExecuteNonQuery();
-            var mb = MessageBox.Show(this, "Membre Ajouté!", "Operation réussi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            if (mb == DialogResult.OK)
-            {
-                this.Hide();
-                GestionAssoc ga = new GestionAssoc();
-                ga.Show();
-            }
             }
         }
 
