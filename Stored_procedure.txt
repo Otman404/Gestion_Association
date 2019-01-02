@@ -1,0 +1,6 @@
+CREATE procedure getMemberByCIN @cin varchar(10)
+as
+begin
+select * from MEMBRE where MEMBRE.cin LIKE '%'+ @cin+ '%'
+
+end

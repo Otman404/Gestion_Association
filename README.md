@@ -21,8 +21,10 @@ add a donation to the association and see a list of donators ...
 ![](Screenshots/members.jpg)
 
 
+Icons From : https://www.flaticon.com/
+
 # DataBase
-Open sql server management studio or visual studio, create a database then in a new query copy what's inside [Tables.txt](Tables.txt)
+Open sql server management studio or visual studio, create a database then in a new query copy what's inside [Tables.txt](Tables.txt) , [Stored_procedure.txt](Stored_procedure.txt) , [Triggers.txt](Triggers.txt)
 
 # DataBase Diagram
 

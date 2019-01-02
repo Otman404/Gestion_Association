@@ -1,0 +1,78 @@
+create trigger DecreaseMembers on Membre
+after Delete
+as
+begin
+
+update Association
+set Nbrs_de_Membres -= 1 
+
+end
+
+================================
+
+CREATE trigger deleteMemberRefFromPayements on Membre
+instead of Delete
+as
+begin
+
+delete from Donation
+where id_payement in (select p.id from Payement p , deleted d where p.membre_id = d.id)
+
+delete from Payement
+where membre_id in (select id from deleted )
+
+delete from Adhesion
+where id_membre in (select id from deleted )
+
+delete from membre
+where id in (select id from deleted)
+
+end
+
+==================================
+
+create trigger InscreaseMembers on Membre
+after insert
+as
+begin
+
+update Association
+set Nbrs_de_Membres += 1 
+
+
+end
+
+=====================================
+CREATE trigger trgr_add_donation on Payement
+after Insert 
+as
+begin
+
+--declare @a decimal
+--set @a = (select somme_argent from inserted)
+--update Membre
+--set SommeDons = SommeDons + @a
+--where id = inserted.membre_id
+
+--UPDATE m
+--SET m.SommeDons =  i.somme_argent + m.SommeDons
+--FROM Membre m
+--left JOIN inserted i
+--	ON m.id = i.membre_id
+
+insert into Donation (id_membre,id_payement,Montant)
+select i.membre_id,i.id,i.somme_argent from Inserted i
+
+end
+
+
+============================
+create trigger update_budget_total on Payement
+after insert
+as
+begin
+
+update a
+set budget_total += i.somme_argent
+from Association a,inserted i
+end
